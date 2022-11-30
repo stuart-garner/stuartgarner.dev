@@ -1,0 +1,59 @@
+{
+  "id": "project",
+  "type": "SharedSlice",
+  "name": "Project",
+  "description": "Project",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Project",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Description",
+            "placeholder": "A nice description of your feature"
+          }
+        },
+        "screen_shot": {
+          "type": "Image",
+          "config": {
+            "label": "Screen Shot",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "git_hub_link": {
+          "type": "Link",
+          "config": {
+            "label": "Git hub Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "live_link": {
+          "type": "Link",
+          "config": {
+            "label": "Live Link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

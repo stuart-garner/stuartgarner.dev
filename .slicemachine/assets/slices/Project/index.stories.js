@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/Project';
+
+export default {
+  title: 'slices/Project'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"heading1","text":"President","spans":[]}],"description":[{"type":"paragraph","text":"Esse aute nostrud Lorem mollit in tempor esse minim proident commodo sunt in aliqua occaecat reprehenderit. Pariatur excepteur id irure sint laborum.","spans":[]}],"screen_shot":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1607582278043-57198ac8da43"},"git_hub_link":{"link_type":"Web","url":"https://prismic.io"},"live_link":{"link_type":"Web","url":"http://twitter.com"}},"slice_type":"project","id":"_Default"}} />
+_Default.storyName = ''

@@ -1,0 +1,158 @@
+{
+  "id": "homepage",
+  "label": "homePage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "heading": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Heading",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading1,strong"
+        }
+      },
+      "sub_heading": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Sub Heading",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        }
+      },
+      "profile_picture": {
+        "type": "Image",
+        "config": {
+          "label": "Profile Picture",
+          "constraint": {
+            "width": 1515,
+            "height": 1515
+          },
+          "thumbnails": []
+        }
+      },
+      "about_me_heading": {
+        "type": "StructuredText",
+        "config": {
+          "label": "About Me Heading",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
+      "about_me_body": {
+        "type": "StructuredText",
+        "config": {
+          "label": "About Me Body",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,strong,em,hyperlink,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "portfolio": {
+        "type": "Group",
+        "config": {
+          "label": "Portfolio",
+          "fields": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading2"
+              }
+            },
+            "description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "githublink": {
+              "type": "Link",
+              "config": {
+                "label": "GitHub Link",
+                "placeholder": "",
+                "allowTargetBlank": false,
+                "select": null
+              }
+            },
+            "live_link": {
+              "type": "Link",
+              "config": {
+                "label": "Live Link",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "screenshot": {
+              "type": "Image",
+              "config": {
+                "label": "Screenshot",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "testimonials": {
+        "type": "Group",
+        "config": {
+          "label": "Testimonials",
+          "fields": {
+            "quote": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Quote",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "name": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Name",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading4"
+              }
+            },
+            "affiliation": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Affiliation",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph"
+              }
+            },
+            "profile_picture": {
+              "type": "Image",
+              "config": {
+                "label": "Profile Picture",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    }
+  }
+}

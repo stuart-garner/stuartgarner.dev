@@ -1,0 +1,252 @@
+{
+  "slices": {
+    "components": {
+      "home_introduction": {
+        "library": "slices",
+        "id": "home_introduction",
+        "name": "Portfolio",
+        "description": "HomeIntroduction",
+        "model": {
+          "id": "home_introduction",
+          "type": "SharedSlice",
+          "name": "Portfolio",
+          "description": "HomeIntroduction",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HomeIntroduction",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                }
+              },
+              "items": {
+                "project_title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Project Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "project_description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Project Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "project_screenshot": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Project Screenshot",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "github_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "GitHub Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "live_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Live Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "project_title": [
+                  {
+                    "type": "paragraph",
+                    "text": "Minim est eu amet duis do nostrud amet amet minim consequat magna est mollit. Eu irure magna cupidatat cillum ad sint. Tempor mollit tempor labore reprehenderit.",
+                    "spans": []
+                  }
+                ],
+                "project_description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Esse dolor ex nostrud sunt. Id dolore excepteur sit anim culpa enim. Reprehenderit enim ex do in duis voluptate elit nisi nisi veniam elit consectetur.",
+                    "spans": []
+                  }
+                ],
+                "project_screenshot": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
+                },
+                "github_link": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                },
+                "live_link": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Headed",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "home_introduction"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "project": {
+        "library": "slices",
+        "id": "project",
+        "name": "Project",
+        "description": "Project",
+        "model": {
+          "id": "project",
+          "type": "SharedSlice",
+          "name": "Project",
+          "description": "Project",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Project",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                },
+                "screen_shot": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Screen Shot",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "git_hub_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Git hub Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "live_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Live Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "President",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Esse aute nostrud Lorem mollit in tempor esse minim proident commodo sunt in aliqua occaecat reprehenderit. Pariatur excepteur id irure sint laborum.",
+                  "spans": []
+                }
+              ],
+              "screen_shot": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
+              },
+              "git_hub_link": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "live_link": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              }
+            },
+            "slice_type": "project"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      }
+    }
+  }
+}

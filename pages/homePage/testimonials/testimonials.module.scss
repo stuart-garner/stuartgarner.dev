@@ -1,0 +1,40 @@
+@import "../../../styles/variables";
+
+.testimonialsSection {
+  background-color: #fff;
+
+  .wrapper {
+    clip-path: polygon(0 0%, 50% 10%, 100% 0%, 100% 100%, 0 100%);
+    background-color: #232123;
+    padding: 150px 30px 120px 30px;
+
+    @media screen and (min-width: 768px) {
+      padding: 150px 50px 120px 50px;
+    }
+
+    .content {
+      align-items: center;
+      justify-content: flex-start;
+      color: #fff;
+      gap: 50px;
+      min-height: 500px;
+
+      .testimonialText {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 40px;
+
+        @media screen and (min-width: 765px) {
+          text-align: left;
+        }
+        .testimonialsWrapper {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
