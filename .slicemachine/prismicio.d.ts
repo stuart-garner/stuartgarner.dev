@@ -86,6 +86,17 @@ interface HomepageDocumentData {
      */
     testimonials: prismicT.GroupField<Simplify<HomepageDocumentDataTestimonialsItem>>;
     /**
+     * Clients field in *homePage*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.clients[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    clients: prismicT.GroupField<Simplify<HomepageDocumentDataClientsItem>>;
+    /**
      * Slice Zone field in *homePage*
      *
      * - **Field Type**: Slice Zone
@@ -198,6 +209,22 @@ export interface HomepageDocumentDataTestimonialsItem {
      *
      */
     profile_picture: prismicT.ImageField<never>;
+}
+/**
+ * Item in homePage → Clients
+ *
+ */
+export interface HomepageDocumentDataClientsItem {
+    /**
+     * Client Logo field in *homePage → Clients*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.clients[].client_logo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    client_logo: prismicT.ImageField<never>;
 }
 /**
  * Slice for *homePage → Slice Zone*
@@ -394,6 +421,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataPortfolioItem, HomepageDocumentDataTestimonialsItem, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, HomeIntroductionSliceDefaultPrimary, HomeIntroductionSliceDefaultItem, HomeIntroductionSliceDefault, HomeIntroductionSliceVariation, HomeIntroductionSlice, ProjectSliceDefaultPrimary, ProjectSliceDefault, ProjectSliceVariation, ProjectSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataPortfolioItem, HomepageDocumentDataTestimonialsItem, HomepageDocumentDataClientsItem, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, HomeIntroductionSliceDefaultPrimary, HomeIntroductionSliceDefaultItem, HomeIntroductionSliceDefault, HomeIntroductionSliceVariation, HomeIntroductionSlice, ProjectSliceDefaultPrimary, ProjectSliceDefault, ProjectSliceVariation, ProjectSlice };
     }
 }

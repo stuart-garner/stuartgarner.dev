@@ -7,6 +7,8 @@ import { PrismicRichText } from "@prismicio/react";
 import { RTNode } from "@prismicio/types";
 import { PrismicNextImage } from "@prismicio/next";
 
+import { AnimationOnScroll } from "react-animation-on-scroll";
+
 interface Props {
   heading: [] | [RTNode, ...RTNode[]] | null | undefined;
   subHeading: [] | [RTNode, ...RTNode[]] | null | undefined;
@@ -26,6 +28,7 @@ const Introduction = (props: Props) => {
             <PrismicRichText field={heading} />
             <PrismicRichText field={subHeading} />
           </div>
+
           <Link className="button-link" href="/#about-section">
             Learn more
           </Link>

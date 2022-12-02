@@ -63,7 +63,7 @@
                 "label": "Title",
                 "placeholder": "",
                 "allowTargetBlank": true,
-                "single": "heading2"
+                "single": "heading3"
               }
             },
             "description": {
@@ -139,6 +139,22 @@
               "type": "Image",
               "config": {
                 "label": "Profile Picture",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "clients": {
+        "type": "Group",
+        "config": {
+          "label": "Clients",
+          "fields": {
+            "client_logo": {
+              "type": "Image",
+              "config": {
+                "label": "Client Logo",
                 "constraint": {},
                 "thumbnails": []
               }

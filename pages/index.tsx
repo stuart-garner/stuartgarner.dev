@@ -11,6 +11,7 @@ import Testimonials from "./homePage/testimonials";
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export default function Home({ page }: Props) {
+  console.log("[STU] - ", page);
   return (
     <>
       <Head>
@@ -30,7 +31,10 @@ export default function Home({ page }: Props) {
             body={page.data.about_me_body}
           />
           <Portfolio content={page.data.portfolio} />
-          <Testimonials content={page.data.testimonials} />
+          <Testimonials
+            content={page.data.testimonials}
+            clients={page.data.clients}
+          />
         </>
       </DefaultLayout>
     </>
