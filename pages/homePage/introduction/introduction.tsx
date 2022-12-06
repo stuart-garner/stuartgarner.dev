@@ -1,13 +1,9 @@
 import * as React from "react";
-import classNames from "classnames";
 
-import styles from "./introduction.module.scss";
 import Link from "next/link";
 import { PrismicRichText } from "@prismicio/react";
 import { RTNode } from "@prismicio/types";
 import { PrismicNextImage } from "@prismicio/next";
-
-import { AnimationOnScroll } from "react-animation-on-scroll";
 
 interface Props {
   heading: [] | [RTNode, ...RTNode[]] | null | undefined;
@@ -16,27 +12,20 @@ interface Props {
 }
 
 const Introduction = (props: Props) => {
-  const { heading, profilePic, subHeading } = props;
+  const { heading, profilePic } = props;
   return (
-    <section
-      id="intro-section"
-      className={classNames(styles.introSection, "section")}
-    >
-      <div className={classNames(styles.wrapper, "wrapper")}>
-        <div className={classNames(styles.content, "content")}>
-          <div>
-            <PrismicRichText field={heading} />
-            <PrismicRichText field={subHeading} />
-          </div>
-
-          <Link className="button-link" href="/#about-section">
-            Learn more
-          </Link>
+    <section id="intro-section" className="relative h-[600px] bg-gray-800">
+      <div className="container mx-auto h-full bg-gray-900 p-10 lg:py-36 2xl:py-56">
+        <div className="w-[100%] sm:w-[50%] md:w-[50%]">
+          <PrismicRichText field={heading} />
         </div>
-        <PrismicNextImage
-          field={profilePic}
-          className={styles.profilePicture}
-        />
+
+        <Link className="button-link" href="/#about-section">
+          Learn more
+        </Link>
+      </div>
+      <div className="absolute bottom-0 right-0 h-[50%] sm:h-[70%] md:h-[70%] lg:h-[90%]">
+        <PrismicNextImage field={profilePic} />
       </div>
     </section>
   );

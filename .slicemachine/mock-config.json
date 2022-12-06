@@ -41,12 +41,6 @@
           }
         }
       },
-      "sub_heading": {
-        "config": {
-          "patternType": "HEADING",
-          "blocks": 1
-        }
-      },
       "heading": {
         "config": {
           "patternType": "HEADING",

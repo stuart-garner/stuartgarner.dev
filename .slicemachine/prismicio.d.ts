@@ -20,17 +20,6 @@ interface HomepageDocumentData {
      */
     heading: prismicT.RichTextField;
     /**
-     * Sub Heading field in *homePage*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: *None*
-     * - **API ID Path**: homepage.sub_heading
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    sub_heading: prismicT.TitleField;
-    /**
      * Profile Picture field in *homePage*
      *
      * - **Field Type**: Image

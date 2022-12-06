@@ -14,15 +14,6 @@
           "single": "heading1,strong"
         }
       },
-      "sub_heading": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Sub Heading",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "single": "heading1"
-        }
-      },
       "profile_picture": {
         "type": "Image",
         "config": {

@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;900&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+  h1 {
+    @apply mb-5 text-4xl font-bold text-gray-100 md:text-5xl xl:text-6xl;
+  }
+
+  strong {
+    @apply text-yellow-300;
+  }
+
+  img {
+    @apply h-full w-auto;
+  }
+}

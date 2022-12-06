@@ -26,7 +26,7 @@ export default function Home({ page }: Props) {
             subHeading={page.data.sub_heading}
             profilePic={page.data.profile_picture}
           />
-          <About
+          {/*  <About
             heading={page.data.about_me_heading}
             body={page.data.about_me_body}
           />
@@ -34,7 +34,7 @@ export default function Home({ page }: Props) {
           <Testimonials
             content={page.data.testimonials}
             clients={page.data.clients}
-          />
+  /> */}
         </>
       </DefaultLayout>
     </>
