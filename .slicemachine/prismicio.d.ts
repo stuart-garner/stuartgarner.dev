@@ -53,6 +53,17 @@ interface HomepageDocumentData {
      */
     about_me_body: prismicT.RichTextField;
     /**
+     * Portfolio Heading field in *homePage*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.portfolio_heading
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    portfolio_heading: prismicT.TitleField;
+    /**
      * Portfolio field in *homePage*
      *
      * - **Field Type**: Group

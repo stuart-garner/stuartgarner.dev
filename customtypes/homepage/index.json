@@ -43,6 +43,15 @@
           "single": "paragraph,preformatted,strong,em,hyperlink,embed,list-item,o-list-item,rtl"
         }
       },
+      "portfolio_heading": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Portfolio Heading",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
       "portfolio": {
         "type": "Group",
         "config": {

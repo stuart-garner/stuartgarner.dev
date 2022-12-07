@@ -13,33 +13,24 @@ type Props = {
 const Testimonials = (props: Props) => {
   const { content, clients } = props;
   return (
-    <section
-      id="testimonials-section"
-      className={classNames(styles.testimonialsSection, "section")}
-    >
-      <div className={classNames(styles.wrapper, "wrapper")}>
-        <div className={classNames(styles.content, "content")}>
-          <div className={styles.testimonialText}>
-            <h2>Testimonials</h2>
-            <div className={styles.testimonialsWrapper}>
-              {content?.map((item, index) => {
-                return (
-                  <TestimonialCard key={`testimonial${index}`} {...item} />
-                );
-              })}
-            </div>
-            <div className={styles.clientLogos}>
-              {clients?.map((item, index) => {
-                return (
-                  <PrismicNextImage
-                    key={`logo${index}`}
-                    field={item.client_logo}
-                    className={styles.logo}
-                  />
-                );
-              })}
-            </div>
-          </div>
+    <section id="testimonials-section">
+      <div className="container mx-auto bg-slate-500">
+        <h2>Testimonials</h2>
+        <div className="grid grid-cols-3">
+          {content?.map((item, index) => {
+            return <TestimonialCard key={`testimonial${index}`} {...item} />;
+          })}
+        </div>
+        <div>
+          {clients?.map((item, index) => {
+            return (
+              <PrismicNextImage
+                key={`logo${index}`}
+                field={item.client_logo}
+                className={styles.logo}
+              />
+            );
+          })}
         </div>
       </div>
     </section>

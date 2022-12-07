@@ -46,6 +46,12 @@
           "patternType": "HEADING",
           "blocks": 1
         }
+      },
+      "portfolio_heading": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
       }
     }
   },

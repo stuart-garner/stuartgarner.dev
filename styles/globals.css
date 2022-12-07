@@ -9,6 +9,22 @@
     @apply mb-5 text-4xl font-bold text-gray-100 md:text-5xl xl:text-6xl;
   }
 
+  h2 {
+    @apply mb-5 text-4xl font-bold;
+  }
+
+  h3 {
+    @apply mb-5 text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl font-bold;
+  }
+
+  p {
+    @apply mb-5;
+  }
+
   strong {
     @apply text-yellow-300;
   }

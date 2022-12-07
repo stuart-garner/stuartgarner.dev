@@ -1,7 +1,5 @@
 import React from "react";
-import classNames from "classnames";
 
-import styles from "./about.module.scss";
 import Link from "next/link";
 import { PrismicRichText } from "@prismicio/react";
 import { RTNode } from "@prismicio/types";
@@ -14,21 +12,15 @@ interface Props {
 const About = (props: Props) => {
   const { heading, body } = props;
   return (
-    <section
-      id="about-section"
-      className={classNames(styles.aboutSection, "section")}
-    >
-      <div className={classNames(styles.wrapper, "wrapper")}>
-        <div className={classNames(styles.content, "content")}>
-          <div className={styles.aboutText}>
-            <PrismicRichText field={heading} />
-            <PrismicRichText field={body} />
-
-            <Link className="button-link" href="/#about-section">
-              [My resume]
-            </Link>
-          </div>
+    <section id="about-section" className="bg-black">
+      <div className="container mx-auto p-10 text-gray-50">
+        <PrismicRichText field={heading} />
+        <div className="md:text-xl xl:text-2xl">
+          <PrismicRichText field={body} />
         </div>
+        <Link className="button-link" href="/#about-section">
+          [My resume]
+        </Link>
       </div>
     </section>
   );
