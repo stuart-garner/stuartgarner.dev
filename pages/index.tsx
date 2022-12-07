@@ -10,6 +10,14 @@ import { RTNode } from "@prismicio/types";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
+type ProjectPropsType = {
+  title: [] | [RTNode, ...RTNode[]] | null | undefined;
+  description: [] | [RTNode, ...RTNode[]] | null | undefined;
+  githublink?: any;
+  live_link?: any;
+  screenshot: any;
+};
+
 export default function Home({ page }: Props) {
   return (
     <>
@@ -49,7 +57,7 @@ export default function Home({ page }: Props) {
               <PrismicRichText field={page.data.portfolio_heading} />
               <div className="flex flex-col gap-20">
                 {page.data.portfolio?.map((item: any, index: number) => {
-                  return <WorkItem key={`workItem${index}`} {...item} />;
+                  return <Project key={`workItem${index}`} {...item} />;
                 })}
               </div>
             </div>
@@ -82,26 +90,13 @@ export default function Home({ page }: Props) {
               </div>
             </div>
           </section>
-
-          {/*<Testimonials
-            content={page.data.testimonials}
-            clients={page.data.clients}
-              />*/}
         </>
       </DefaultLayout>
     </>
   );
 }
 
-type WorkItemType = {
-  title: [] | [RTNode, ...RTNode[]] | null | undefined;
-  description: [] | [RTNode, ...RTNode[]] | null | undefined;
-  githublink?: any;
-  live_link?: any;
-  screenshot: any;
-};
-
-const WorkItem = (props: WorkItemType) => {
+const Project = (props: ProjectPropsType) => {
   const { title, description, screenshot, githublink, live_link } = props;
   return (
     <div className="lg:flex lg:flex-row lg:gap-10">
