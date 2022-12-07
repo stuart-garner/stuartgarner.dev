@@ -54,30 +54,27 @@ export default function Home({ page }: Props) {
               </div>
             </div>
           </section>
-
           <section id="testimonials-section" className="bg-slate-900">
-            <div className="container mx-auto bg-slate-900 p-10 text-gray-100">
+            <div className="container mx-auto  bg-slate-900 p-10 text-gray-100">
               <h2>Testimonials</h2>
-              <div className="lg:grid lg:grid-cols-3 lg:gap-x-20 lg:gap-y-5">
-                {page.data.testimonials?.map((item: any, index: number) => {
-                  return (
-                    <div key={`quote${index}`}>
-                      <PrismicRichText field={item.quote} />
-                    </div>
-                  );
-                })}
+              <div className="grid grid-cols-1 gap-20 lg:grid-cols-3">
                 {page.data.testimonials?.map((item: any, index: number) => {
                   return (
                     <div
-                      key={`affiliation${index}`}
-                      className="flex flex-row justify-start gap-5"
+                      key={`quote${index}`}
+                      className="flex h-[100%] flex-col justify-between gap-10"
                     >
-                      <div className="h-[75px] grayscale">
-                        <PrismicNextImage field={item.profile_picture} />
+                      <div>
+                        <PrismicRichText field={item.quote} />
                       </div>
-                      <div className="basis-3/4">
-                        <PrismicRichText field={item.name} />
-                        <PrismicRichText field={item.affiliation} />
+                      <div className="flex flex-row justify-start gap-5">
+                        <div className="h-[75px] grayscale">
+                          <PrismicNextImage field={item.profile_picture} />
+                        </div>
+                        <div className="mb-0 basis-3/4">
+                          <PrismicRichText field={item.name} />
+                          <PrismicRichText field={item.affiliation} />
+                        </div>
                       </div>
                     </div>
                   );
