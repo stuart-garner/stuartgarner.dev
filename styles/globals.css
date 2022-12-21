@@ -9,9 +9,18 @@
     @apply scroll-smooth;
   }
 
+  header {
+    @apply h-[50px] w-full;
+  }
+
   section {
     @apply pt-20 pb-20;
   }
+
+  footer {
+    @apply pt-20 pb-20;
+  }
+
   h1 {
     @apply mb-5 text-4xl font-bold text-gray-900 md:text-5xl xl:text-9xl;
   }

@@ -8,11 +8,17 @@ const DefaultLayout = (props: Props) => {
   const { children } = props;
   return (
     <>
-      <header className="fixed z-10 w-full ">
-        <div className="container mx-auto px-10 py-5 text-white">[SG]</div>
+      <header className="bg-slate-200">
+        <div className="container flex h-full items-center text-black">
+          <h1 className="m-0 align-middle text-xl">[SG]</h1>
+        </div>
       </header>
       <main className="w-screen bg-gray-600">{children}</main>
-      <footer className=" h-{300px] bg-red-400">FOOTER</footer>
+      <footer className=" h-[500px]  bg-black ">
+        <div className="container flex h-full  text-gray-200">
+          Built with Next JS, Typsript & Tailwind. CMS powered by Prismic
+        </div>
+      </footer>
     </>
   );
 };

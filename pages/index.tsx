@@ -29,7 +29,7 @@ export default function Home({ page }: Props) {
       <DefaultLayout>
         <>
           <section id="intro-section" className="bg-white">
-            <div className="container flex items-center justify-between pt-[150px] pb-20">
+            <div className="container flex items-center justify-between pt-[100px] pb-20">
               <div className="flex flex-col gap-10 ">
                 <PrismicRichText field={page.data.heading} />
                 <Link className="button-link" href="/#about-section">
