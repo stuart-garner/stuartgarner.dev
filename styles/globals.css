@@ -5,12 +5,19 @@
 @import "tailwindcss/utilities";
 
 @layer components {
+  html {
+    @apply scroll-smooth;
+  }
+
+  section {
+    @apply pt-20 pb-20;
+  }
   h1 {
-    @apply mb-5 text-4xl font-bold text-gray-100 md:text-5xl xl:text-6xl;
+    @apply mb-5 text-4xl font-bold text-gray-900 md:text-5xl xl:text-9xl;
   }
 
   h2 {
-    @apply mb-5 text-4xl font-bold;
+    @apply mb-10 text-4xl font-bold;
   }
 
   h3 {
@@ -26,10 +33,14 @@
   }
 
   strong {
-    @apply text-yellow-300;
+    @apply text-yellow-500;
   }
 
   img {
-    @apply h-full w-auto;
+    @apply h-auto w-full;
+  }
+
+  .container {
+    @apply mx-auto px-10;
   }
 }

@@ -20,17 +20,6 @@ interface HomepageDocumentData {
      */
     heading: prismicT.RichTextField;
     /**
-     * Profile Picture field in *homePage*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: homepage.profile_picture
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    profile_picture: prismicT.ImageField<never>;
-    /**
      * About Me Heading field in *homePage*
      *
      * - **Field Type**: Title
@@ -41,6 +30,17 @@ interface HomepageDocumentData {
      *
      */
     about_me_heading: prismicT.TitleField;
+    /**
+     * Profile Picture field in *homePage*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.profile_picture
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    profile_picture: prismicT.ImageField<never>;
     /**
      * About Me Body field in *homePage*
      *

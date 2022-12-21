@@ -28,34 +28,36 @@ export default function Home({ page }: Props) {
       </Head>
       <DefaultLayout>
         <>
-          <section id="intro-section" className="h-[600px] bg-gray-800">
-            <div className="container relative mx-auto h-full bg-slate-900 p-10 lg:py-36 2xl:py-56">
-              <div className="w-[100%] sm:w-[50%] md:w-[50%]">
+          <section id="intro-section" className="bg-white">
+            <div className="container flex items-center justify-between pt-[150px] pb-20">
+              <div className="flex flex-col gap-10 ">
                 <PrismicRichText field={page.data.heading} />
+                <Link className="button-link" href="/#about-section">
+                  Learn more
+                </Link>
               </div>
-              <Link className="button-link" href="/#about-section">
-                Learn more
-              </Link>
-              <div className="absolute bottom-0 right-0 h-[50%] sm:h-[70%] md:h-[70%] lg:h-[90%]">
+            </div>
+          </section>
+          <section id="about-section" className="bg-slate-900">
+            <div className="container flex items-center justify-between gap-20 text-gray-300">
+              <div className="basis-2/3">
+                <PrismicRichText field={page.data.about_me_heading} />
+                <div className="md:text-xl xl:text-2xl">
+                  <PrismicRichText field={page.data.about_me_body} />
+                </div>
+                <Link className="button-link" href="/#about-section">
+                  [My resume]
+                </Link>
+              </div>
+              <div className="basis-1/3">
                 <PrismicNextImage field={page.data.profile_picture} />
               </div>
             </div>
           </section>
-          <section id="about-section" className="bg-black">
-            <div className="container mx-auto p-10 text-gray-50">
-              <PrismicRichText field={page.data.about_me_heading} />
-              <div className="md:text-xl xl:text-2xl">
-                <PrismicRichText field={page.data.about_me_body} />
-              </div>
-              <Link className="button-link" href="/#about-section">
-                [My resume]
-              </Link>
-            </div>
-          </section>
           <section id="portfolio-section" className="bg-white">
-            <div className="container mx-auto bg-white p-10">
+            <div className="container bg-white">
               <PrismicRichText field={page.data.portfolio_heading} />
-              <div className="flex flex-col gap-20">
+              <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
                 {page.data.portfolio?.map((item: any, index: number) => {
                   return <Project key={`workItem${index}`} {...item} />;
                 })}
@@ -63,7 +65,7 @@ export default function Home({ page }: Props) {
             </div>
           </section>
           <section id="testimonials-section" className="bg-slate-900">
-            <div className="container mx-auto  bg-slate-900 p-10 text-gray-100">
+            <div className="container bg-slate-900  text-gray-100">
               <h2>Testimonials</h2>
               <div className="grid grid-cols-1 gap-20 lg:grid-cols-3">
                 {page.data.testimonials?.map((item: any, index: number) => {
@@ -76,7 +78,7 @@ export default function Home({ page }: Props) {
                         <PrismicRichText field={item.quote} />
                       </div>
                       <div className="flex flex-row justify-start gap-5">
-                        <div className="h-[75px] grayscale">
+                        <div className="w-[75px] grayscale">
                           <PrismicNextImage field={item.profile_picture} />
                         </div>
                         <div className="mb-0 basis-3/4">
@@ -99,7 +101,10 @@ export default function Home({ page }: Props) {
 const Project = (props: ProjectPropsType) => {
   const { title, description, screenshot, githublink, live_link } = props;
   return (
-    <div className="lg:flex lg:flex-row lg:gap-10">
+    <div className="lg:flex lg:flex-col lg:gap-10">
+      <div className="mt-10 bg-gray-500 lg:mt-0 lg:mb-0 lg:basis-2/3">
+        <PrismicNextImage field={screenshot} />
+      </div>
       <div className="lg:basis-1/3">
         <PrismicRichText field={title} />
         <PrismicRichText field={description} />
@@ -118,9 +123,6 @@ const Project = (props: ProjectPropsType) => {
             )}
           </>
         )}
-      </div>
-      <div className="mt-10 bg-gray-500 lg:mt-0 lg:mb-0 lg:basis-2/3">
-        <PrismicNextImage field={screenshot} />
       </div>
     </div>
   );
