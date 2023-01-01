@@ -13,8 +13,8 @@ const DefaultLayout = (props: Props) => {
           <h1 className="m-0 align-middle text-xl">[SG]</h1>
         </div>
       </header>
-      <main className="w-screen bg-gray-600">{children}</main>
-      <footer className=" h-[500px]  bg-black ">
+      <main className="w-screen bg-slate-900">{children}</main>
+      <footer className="h-[500px] bg-black ">
         <div className="container flex h-full  text-gray-200">
           Built with Next JS, Typsript & Tailwind. CMS powered by Prismic
         </div>

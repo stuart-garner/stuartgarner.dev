@@ -14,7 +14,7 @@
   }
 
   section {
-    @apply pt-20 pb-20;
+    @apply relative pt-20 pb-20;
   }
 
   footer {

@@ -28,7 +28,10 @@ export default function Home({ page }: Props) {
       </Head>
       <DefaultLayout>
         <>
-          <section id="intro-section" className="bg-white">
+          <section
+            id="intro-section"
+            className=" bg-white clip-path-headerPoly"
+          >
             <div className="container flex items-center justify-between pt-[100px] pb-20">
               <div className="flex flex-col gap-10 ">
                 <PrismicRichText field={page.data.heading} />
@@ -54,8 +57,8 @@ export default function Home({ page }: Props) {
               </div>
             </div>
           </section>
-          <section id="portfolio-section" className="bg-white">
-            <div className="container bg-white">
+          <section id="portfolio-section" className="bg-slate-200">
+            <div className="container">
               <PrismicRichText field={page.data.portfolio_heading} />
               <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
                 {page.data.portfolio?.map((item: any, index: number) => {
@@ -102,7 +105,7 @@ const Project = (props: ProjectPropsType) => {
   const { title, description, screenshot, githublink, live_link } = props;
   return (
     <div className="lg:flex lg:flex-col lg:gap-10">
-      <div className="mt-10 bg-gray-500 lg:mt-0 lg:mb-0 lg:basis-2/3">
+      <div className="mt-10  lg:mt-0 lg:mb-0 lg:basis-2/3">
         <PrismicNextImage field={screenshot} />
       </div>
       <div className="lg:basis-1/3">

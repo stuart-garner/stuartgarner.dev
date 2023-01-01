@@ -6,7 +6,10 @@ module.exports = {
     "./templates/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    clipPath: {
+      headerPoly: "polygon(0 0, 100% 0, 100% 100%, 0% 90%)",
+    },
     extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwind-clip-path")],
 };
