@@ -97,6 +97,17 @@ interface HomepageDocumentData {
      */
     clients: prismicT.GroupField<Simplify<HomepageDocumentDataClientsItem>>;
     /**
+     * Built With Tech field in *homePage*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.built_with_tech[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    built_with_tech: prismicT.GroupField<Simplify<HomepageDocumentDataBuiltWithTechItem>>;
+    /**
      * Slice Zone field in *homePage*
      *
      * - **Field Type**: Slice Zone
@@ -225,6 +236,22 @@ export interface HomepageDocumentDataClientsItem {
      *
      */
     client_logo: prismicT.ImageField<never>;
+}
+/**
+ * Item in homePage → Built With Tech
+ *
+ */
+export interface HomepageDocumentDataBuiltWithTechItem {
+    /**
+     * Tech logo field in *homePage → Built With Tech*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: homepage.built_with_tech[].next
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    next: prismicT.ImageField<never>;
 }
 /**
  * Slice for *homePage → Slice Zone*
@@ -421,6 +448,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataPortfolioItem, HomepageDocumentDataTestimonialsItem, HomepageDocumentDataClientsItem, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, HomeIntroductionSliceDefaultPrimary, HomeIntroductionSliceDefaultItem, HomeIntroductionSliceDefault, HomeIntroductionSliceVariation, HomeIntroductionSlice, ProjectSliceDefaultPrimary, ProjectSliceDefault, ProjectSliceVariation, ProjectSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataPortfolioItem, HomepageDocumentDataTestimonialsItem, HomepageDocumentDataClientsItem, HomepageDocumentDataBuiltWithTechItem, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, HomeIntroductionSliceDefaultPrimary, HomeIntroductionSliceDefaultItem, HomeIntroductionSliceDefault, HomeIntroductionSliceVariation, HomeIntroductionSlice, ProjectSliceDefaultPrimary, ProjectSliceDefault, ProjectSliceVariation, ProjectSlice };
     }
 }

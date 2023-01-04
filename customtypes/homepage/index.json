@@ -162,6 +162,22 @@
           }
         }
       },
+      "built_with_tech": {
+        "type": "Group",
+        "config": {
+          "label": "Built With Tech",
+          "fields": {
+            "next": {
+              "type": "Image",
+              "config": {
+                "label": "Tech logo",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

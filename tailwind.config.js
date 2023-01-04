@@ -7,7 +7,8 @@ module.exports = {
   ],
   theme: {
     clipPath: {
-      headerPoly: "polygon(0 0, 100% 0, 100% 100%, 0% 90%)",
+      headerPoly: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      footerPoly: "polygon(0 0, 50% 0, 100% 0, 100% 100%, 0 100%)",
     },
     extend: {},
   },
