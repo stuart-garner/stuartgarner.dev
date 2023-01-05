@@ -8,6 +8,9 @@ import Link from "next/link";
 import { PrismicNextImage } from "@prismicio/next";
 import { RTNode } from "@prismicio/types";
 
+import TopWave from "../components/waves/Top";
+import BottomWave from "../components/waves/Bottom";
+
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 type ProjectPropsType = {
@@ -30,9 +33,9 @@ export default function Home({ page }: Props) {
         <>
           <section
             id="intro-section"
-            className=" pt-[150px] pb-[200px]  clip-path-headerPoly xl:pt-[100px] xl:pb-[200px] 2xl:pt-[150px]"
+            className="h-screen min-h-[600px] md:min-h-[800px] 2xl:max-h-[980px]"
           >
-            <div className="container flex items-center justify-between">
+            <div className="container flex h-full items-center justify-between">
               <div className="flex flex-col gap-10 ">
                 <PrismicRichText field={page.data.heading} />
                 <Link className="button-link" href="/#about-section">
@@ -40,29 +43,7 @@ export default function Home({ page }: Props) {
                 </Link>
               </div>
             </div>
-            <div className="custom-shape-divider-bottom-1672848692">
-              <svg
-                data-name="Layer 1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1200 120"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                  opacity=".25"
-                  className="shape-fill"
-                ></path>
-                <path
-                  d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-                  opacity=".5"
-                  className="shape-fill"
-                ></path>
-                <path
-                  d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-                  className="shape-fill"
-                ></path>
-              </svg>
-            </div>
+            <BottomWave colour="fill-white" />
           </section>
           <section id="about-section" className=" bg-white">
             <div className="container flex flex-col-reverse items-center justify-between gap-20  text-slate-900 lg:flex-row">
@@ -80,30 +61,11 @@ export default function Home({ page }: Props) {
               </div>
             </div>
           </section>
-          <section id="portfolio-section" className=" bg-slate-300 pt-[200px]">
-            <div className="custom-shape-divider-top-1672848865">
-              <svg
-                data-name="Layer 1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1200 120"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                  opacity=".25"
-                  className="shape-fill"
-                ></path>
-                <path
-                  d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-                  opacity=".5"
-                  className="shape-fill"
-                ></path>
-                <path
-                  d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-                  className="shape-fill"
-                ></path>
-              </svg>
-            </div>
+          <section
+            id="portfolio-section"
+            className=" bg-slate-300 pt-[150px] md:pt-[150px] xl:pt-[230px] 2xl:pt-[300px]"
+          >
+            <TopWave colour="fill-white" />
             <div className="container">
               <PrismicRichText field={page.data.portfolio_heading} />
               <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
@@ -115,9 +77,22 @@ export default function Home({ page }: Props) {
           </section>
           <section
             id="testimonials-section"
-            className="bg-slate-900 pb-[200px]"
+            className="pt-[150px] pb-[200px] lg:pb-[300px]"
           >
-            <div className="container bg-slate-900  text-gray-100">
+            <div className="custom-shape-divider-top-1672911895">
+              <svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z"
+                  className="curve-shape-fill"
+                ></path>
+              </svg>
+            </div>
+            <div className="container text-gray-100">
               <h2>Testimonials</h2>
               <div className="grid grid-cols-1 gap-20 lg:grid-cols-3">
                 {page.data.testimonials?.map((item: any, index: number) => {
@@ -130,7 +105,7 @@ export default function Home({ page }: Props) {
                         <PrismicRichText field={item.quote} />
                       </div>
                       <div className="flex flex-row justify-start gap-5 ">
-                        <div className="w-[75px] grayscale">
+                        <div className="w-[75px] rounded-2xl grayscale">
                           <PrismicNextImage field={item.profile_picture} />
                         </div>
                         <div className="mb-0 max-h-[75px] basis-3/4">
@@ -143,6 +118,7 @@ export default function Home({ page }: Props) {
                 })}
               </div>
             </div>
+            <BottomWave colour="fill-black" />
           </section>
         </>
       </DefaultLayout>
@@ -174,7 +150,7 @@ const Project = (props: ProjectPropsType) => {
         )}
       </div>
 
-      <div className="mt-10  lg:mt-0 lg:mb-0 lg:basis-2/3">
+      <div className="project-image mt-10 rounded-2xl lg:mt-0 lg:mb-0 lg:basis-2/3">
         <PrismicNextImage field={screenshot} />
       </div>
     </div>

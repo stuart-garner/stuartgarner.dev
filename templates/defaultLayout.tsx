@@ -8,13 +8,13 @@ const DefaultLayout = (props: Props) => {
   const { children } = props;
   return (
     <>
-      <header className="bg-black">
+      <header className="fixed ">
         <div className="container flex h-full items-center text-slate-50">
           <h1 className="m-0 align-middle text-xl">[SG]</h1>
         </div>
       </header>
-      <main className="w-screen bg-slate-900">{children}</main>
-      <footer className="flex flex-col justify-center gap-10 bg-black clip-path-footerPoly">
+      <main>{children}</main>
+      <footer className="clip-path-footerPoly flex flex-col justify-center gap-10 bg-black">
         <div className="container flex h-full flex-row justify-between gap-20 text-gray-500 md:mb-[50px] md:justify-center">
           <div className="flex h-full basis-1/2 flex-col justify-center gap-5 text-center md:basis-1/3 md:gap-10 md:text-left lg:basis-1/4">
             Built with:

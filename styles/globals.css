@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply bg-slate-900;
+    @apply bg-green-500;
   }
 
   header {
@@ -26,7 +26,7 @@
   }
 
   h1 {
-    @apply mb-5 text-6xl font-bold text-slate-50 md:text-7xl xl:text-8xl 2xl:text-9xl;
+    @apply mb-5 text-6xl font-bold text-yellow-100 md:text-8xl xl:text-8xl 2xl:text-9xl;
   }
 
   h2 {
@@ -53,45 +53,31 @@
     @apply mx-auto px-10;
   }
 
-  .shape-fill {
-    @apply fill-white;
+  .curve-shape-fill {
+    @apply fill-slate-300;
   }
 }
 
 h1 strong {
-  background: -webkit-linear-gradient(
-    45deg,
-    rgba(42, 41, 51, 1) 0%,
-    rgba(27, 120, 55, 1) 33%,
-    rgba(182, 182, 23, 1) 66%,
-    rgba(246, 219, 16, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: black;
 }
 
 strong {
   color: rgba(246, 219, 16, 1);
 }
 
-.custom-shape-divider-bottom-1672848692 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
+#intro-section,
+#testimonials-section,
+.project-image {
+  background: linear-gradient(
+    45deg,
+    rgb(49, 45, 80) 0%,
+    rgba(27, 120, 55, 1) 50%,
+    rgba(246, 219, 16, 1) 100%
+  );
 }
 
-.custom-shape-divider-bottom-1672848692 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 127px;
-}
-
-.custom-shape-divider-top-1672848865 {
+.custom-shape-divider-top-1672911895 {
   position: absolute;
   top: 0;
   left: 0;
@@ -100,10 +86,9 @@ strong {
   line-height: 0;
 }
 
-.custom-shape-divider-top-1672848865 svg {
+.custom-shape-divider-top-1672911895 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 127px;
-  transform: rotateY(180deg);
+  height: 67px;
 }
