@@ -56,6 +56,25 @@
   .curve-shape-fill {
     @apply fill-slate-300;
   }
+
+  .button {
+    @apply relative z-[1] inline-block w-fit overflow-hidden rounded-xl bg-amber-400 py-3 px-10 text-gray-900 transition-all duration-300;
+    text-decoration: none;
+  }
+
+  .button:hover {
+    @apply text-green-50;
+  }
+
+  .button::after {
+    @apply absolute left-0 top-0 z-[-1] h-full w-full origin-top-right scale-x-0 scale-y-100 rounded-xl bg-green-600 transition-all duration-300 content-[''];
+    transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  .button:hover::after {
+    @apply origin-top-left scale-x-100 scale-y-100;
+  }
 }
 
 h1 strong {
