@@ -38,7 +38,7 @@ export default function Home({ page }: Props) {
             <div className="container flex h-full items-center justify-between">
               <div className="flex flex-col gap-10 ">
                 <PrismicRichText field={page.data.heading} />
-                <Link className="button-link" href="/#about-section">
+                <Link className="button" href="/#about-section">
                   Learn more
                 </Link>
               </div>
@@ -49,11 +49,11 @@ export default function Home({ page }: Props) {
             <div className="container flex flex-col-reverse items-center justify-between gap-20  text-slate-900 lg:flex-row">
               <div className="basis-2/3">
                 <PrismicRichText field={page.data.about_me_heading} />
-                <div className="md:text-xl xl:text-2xl">
+                <div className="mb-10 md:text-xl xl:text-2xl">
                   <PrismicRichText field={page.data.about_me_body} />
                 </div>
-                <Link className="button-link" href="/#about-section">
-                  [My resume]
+                <Link className="button" href="/#about-section">
+                  My resume
                 </Link>
               </div>
               <div className="max-w-[400px] basis-1/3 lg:max-w-none">
@@ -105,8 +105,11 @@ export default function Home({ page }: Props) {
                         <PrismicRichText field={item.quote} />
                       </div>
                       <div className="flex flex-row justify-start gap-5 ">
-                        <div className="w-[75px] rounded-2xl grayscale">
-                          <PrismicNextImage field={item.profile_picture} />
+                        <div className="w-[75px]  grayscale">
+                          <PrismicNextImage
+                            field={item.profile_picture}
+                            className="rounded-xl"
+                          />
                         </div>
                         <div className="mb-0 max-h-[75px] basis-3/4">
                           <PrismicRichText field={item.name} />
@@ -135,22 +138,22 @@ const Project = (props: ProjectPropsType) => {
         <PrismicRichText field={description} />
 
         {(live_link || githublink) && (
-          <>
+          <div className="flex gap-2 pt-3">
             {live_link && (
-              <Link className="button-link" href="/#about-section">
+              <Link className="button py-2 px-5" href="/#about-section">
                 Live
               </Link>
             )}
             {githublink && (
-              <Link className="button-link" href="/#about-section">
+              <Link className="button py-2 px-5" href="/#about-section">
                 GitHub
               </Link>
             )}
-          </>
+          </div>
         )}
       </div>
 
-      <div className="project-image mt-10 rounded-2xl lg:mt-0 lg:mb-0 lg:basis-2/3">
+      <div className="project-image mt-10 rounded-xl lg:mt-0 lg:mb-0 lg:basis-2/3">
         <PrismicNextImage field={screenshot} />
       </div>
     </div>
