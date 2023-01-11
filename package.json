@@ -31,6 +31,7 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
+    "@formspree/react": "^2.4.1",
     "@prismicio/types": "^0.2.7",
     "@svgr/webpack": "^6.5.1",
     "autoprefixer": "^10.4.13",
