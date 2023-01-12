@@ -2,6 +2,9 @@ import Image from "next/image";
 import { ReactNode } from "react";
 
 import ContactForm from "../components/contactForm";
+import SocialLinks from "../components/socialLinks";
+
+import TechStack from "../components/techStack";
 
 type Props = {
   children: ReactNode;
@@ -17,101 +20,24 @@ const DefaultLayout = (props: Props) => {
         </div>
       </header>
       <main>{children}</main>
-      <footer className="clip-path-footerPoly flex flex-col justify-center gap-10 bg-black">
-        <div className="container flex justify-start gap-20">
-          <div className=" flex h-full basis-1/3 flex-row justify-between gap-20 text-gray-500 md:mb-[50px] md:justify-center">
-            <div className="flex h-full basis-1/2 flex-col justify-center gap-5  ">
-              Built with:
-              <Image src="/next.svg" alt="Next JS" width={200} height={100} />
-              <Image
-                src="/typescript.svg"
-                alt="TypeScript"
-                width={200}
-                height={100}
-              />
-              <Image
-                src="/tailwindcss.svg"
-                alt="Tailwind CSS"
-                width={200}
-                height={100}
-              />
-            </div>
-            <div className="flex h-full basis-1/2 flex-col justify-center gap-5  ">
-              Powered by:
-              <Image
-                src="/prismic.svg"
-                alt="Prismic CMS"
-                width={200}
-                height={100}
-              />
-              <Image
-                src="/formspree.svg"
-                alt="Forms by Formspree"
-                width={200}
-                height={100}
-              />
-              Hosted by:
-              <Image src="/vercel.svg" alt="Vercel" width={200} height={100} />
-            </div>
+      <footer className="clip-path-footerPoly flex flex-col justify-center gap-10 bg-black text-gray-100 ">
+        <div className="container flex flex-col justify-start gap-20 xl:flex-row">
+          <div className="flex basis-1/2 flex-col gap-5">
+            <h4>
+              If you like what you see and what to learn more, drop me a
+              message.
+            </h4>
+            <p>Or find me on...</p>
+            <SocialLinks />
           </div>
-          <div className="flex basis-1/3 flex-col gap-5">
-            <h4 className="text-gray-50">Come and find me!</h4>
-
-            <div className="grid grid-cols-4 justify-start gap-5">
-              <div className="max-w-[80px]">
-                <Image
-                  src="/linkedin-in.svg"
-                  alt="Linked In Profile"
-                  width={300}
-                  height={300}
-                  className="invert"
-                />
-              </div>
-              <div className="max-w-[80px]">
-                <Image
-                  src="/github.svg"
-                  alt="Github Profile"
-                  width={300}
-                  height={300}
-                  className="invert"
-                />
-              </div>
-              <div className="max-w-[80px]">
-                <Image
-                  src="/instagram.svg"
-                  alt="Instagram Profile"
-                  width={300}
-                  height={300}
-                  className="invert"
-                />
-              </div>
-              <div className="max-w-[80px]">
-                <Image
-                  src="/facebook.svg"
-                  alt="Facebook Profile"
-                  width={300}
-                  height={300}
-                  className="invert"
-                />
-              </div>
-              <div className="max-w-[80px]">
-                <Image
-                  src="/twitter.svg"
-                  alt="Twitter Profile"
-                  width={300}
-                  height={300}
-                  className=" invert"
-                />
-              </div>
-            </div>
-            <p className="text-gray-50">Or drop me an email...</p>
-          </div>
-          <div className="basis-1/3">
+          <div className="basis-1/2">
             <ContactForm />
           </div>
         </div>
-        <div className="text-center text-gray-500">
-          Copyright © Stuart Garner. Al rights reserved.
+        <TechStack />
+        <div className="container w-[90%] text-center text-gray-600">
+          Copyright © Stuart Garner {new Date().getFullYear()}. All rights
+          reserved.
         </div>
       </footer>
     </>
@@ -119,3 +45,10 @@ const DefaultLayout = (props: Props) => {
 };
 
 export default DefaultLayout;
+
+/*
+
+
+    
+
+        */

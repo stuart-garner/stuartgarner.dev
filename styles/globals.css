@@ -13,6 +13,10 @@
     @apply bg-green-500;
   }
 
+  body::after {
+    @apply fixed bottom-1 right-1 z-50 bg-gray-900 p-[20px] text-gray-50 content-['sm']  md:content-['md'] lg:content-['lg'] xl:content-['xl'] 2xl:content-['2xl'];
+  }
+
   header {
     @apply h-[50px] w-full;
   }
@@ -39,6 +43,10 @@
 
   h4 {
     @apply text-2xl font-bold;
+  }
+
+  h6 {
+    @apply text-sm font-bold;
   }
 
   p {
@@ -75,6 +83,14 @@
   .button:hover::after {
     @apply origin-top-left scale-x-100 scale-y-100;
   }
+
+  .tech-stack-logo {
+    @apply h-full w-28 fill-gray-600 md:w-[200px] xl:w-28;
+  }
+
+  .social-icons {
+    @apply h-full w-auto fill-gray-50;
+  }
 }
 
 h1 strong {
@@ -89,6 +105,26 @@ strong {
 #testimonials-section,
 .project-image {
   background: linear-gradient(
+    45deg,
+    rgb(49, 45, 80) 0%,
+    rgba(27, 120, 55, 1) 50%,
+    rgba(246, 219, 16, 1) 100%
+  );
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(49, 45, 80) 0%,
+    rgba(27, 120, 55, 1) 50%,
+    rgba(246, 219, 16, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-svg svg {
+  fill: -webkit-linear-gradient(
     45deg,
     rgb(49, 45, 80) 0%,
     rgba(27, 120, 55, 1) 50%,

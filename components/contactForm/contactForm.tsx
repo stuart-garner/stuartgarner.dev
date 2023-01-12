@@ -6,14 +6,9 @@ function ContactForm() {
     return <p className="text-gray-50">Thanks for joining!</p>;
   }
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex w-full flex-col gap-5 text-gray-50"
-    >
+    <form onSubmit={handleSubmit} className="flex w-full flex-col gap-5 ">
       <span className="flex flex-col gap-2">
-        <label htmlFor="email" className="text-gray-600">
-          Email Address:
-        </label>
+        <label htmlFor="email">Email Address:</label>
         <input
           id="email"
           type="email"
@@ -25,9 +20,7 @@ function ContactForm() {
       </span>
 
       <span className="flex flex-col gap-2">
-        <label htmlFor="message" className="text-gray-600">
-          Your Message:
-        </label>
+        <label htmlFor="message">Your Message:</label>
         <textarea
           id="message"
           name="message"

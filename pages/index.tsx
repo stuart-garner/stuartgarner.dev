@@ -33,7 +33,7 @@ export default function Home({ page }: Props) {
         <>
           <section
             id="intro-section"
-            className="h-screen min-h-[600px] md:min-h-[800px] 2xl:max-h-[980px]"
+            className="h-screen min-h-[700px] md:min-h-[800px] xl:min-h-[600px] 2xl:max-h-[980px]"
           >
             <div className="container flex h-full items-center justify-between">
               <div className="flex flex-col gap-10 ">
