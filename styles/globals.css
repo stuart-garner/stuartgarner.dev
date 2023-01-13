@@ -127,3 +127,12 @@ strong {
     rgba(246, 219, 16, 1) 100%
   );
 }
+
+.navBar {
+  top: -50px;
+  transition: top 0.5s;
+}
+
+.show {
+  top: 0px;
+}

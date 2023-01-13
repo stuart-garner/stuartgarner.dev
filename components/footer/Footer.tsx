@@ -4,7 +4,7 @@ import TechStack from "../techStack";
 
 const Footer = () => {
   return (
-    <footer className="clip-path-footerPoly flex flex-col justify-center gap-10 bg-black text-gray-100 ">
+    <footer className="flex flex-col justify-center gap-10 bg-black text-gray-100 ">
       <div className="container flex flex-col justify-start gap-20 xl:flex-row">
         <div className="flex basis-1/2 flex-col gap-5">
           <h4>

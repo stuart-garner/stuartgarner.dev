@@ -3,16 +3,10 @@ import Head from "next/head";
 import DefaultLayout from "../templates/defaultLayout";
 import { InferGetStaticPropsType, GetStaticPropsContext } from "next";
 import { createClient } from "../prismicio";
-import { PrismicRichText } from "@prismicio/react";
 
-import { PrismicNextImage } from "@prismicio/next";
-import { RTNode } from "@prismicio/types";
-
-import BottomWave from "../components/waves/Bottom";
 import HomePageIntro from "../components/sections/HomePageIntro";
 import HomePageAbout from "../components/sections/HomePageAbout";
 import HomePagePortfolio from "../components/sections/HomePagePortfolio";
-import TopCurve from "../components/waves/TopCurve";
 import HomePageTestimonials from "../components/sections/HomePageTestimonials";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
