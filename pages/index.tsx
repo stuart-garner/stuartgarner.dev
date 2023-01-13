@@ -18,7 +18,6 @@ import HomePageTestimonials from "../components/sections/HomePageTestimonials";
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export default function Home({ page }: Props) {
-  console.log(page);
   return (
     <>
       <Head>

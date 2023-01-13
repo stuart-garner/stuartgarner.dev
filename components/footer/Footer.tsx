@@ -1,0 +1,29 @@
+import ContactForm from "../contactForm";
+import SocialLinks from "../socialLinks";
+import TechStack from "../techStack";
+
+const Footer = () => {
+  return (
+    <footer className="clip-path-footerPoly flex flex-col justify-center gap-10 bg-black text-gray-100 ">
+      <div className="container flex flex-col justify-start gap-20 xl:flex-row">
+        <div className="flex basis-1/2 flex-col gap-5">
+          <h4>
+            If you like what you see and what to learn more, drop me a message.
+          </h4>
+          <p>Or find me on...</p>
+          <SocialLinks />
+        </div>
+        <div className="basis-1/2">
+          <ContactForm />
+        </div>
+      </div>
+      <TechStack />
+      <div className="container w-[90%] text-center text-gray-600">
+        Copyright © Stuart Garner {new Date().getFullYear()}. All rights
+        reserved.
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
