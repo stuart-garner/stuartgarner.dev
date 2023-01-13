@@ -61,10 +61,6 @@
     @apply mx-auto px-10;
   }
 
-  .curve-shape-fill {
-    @apply fill-slate-300;
-  }
-
   .button {
     @apply relative z-[1] inline-block w-fit overflow-hidden rounded-xl bg-amber-400 py-3 px-10 text-gray-900 transition-all duration-300;
     text-decoration: none;
@@ -130,20 +126,4 @@ strong {
     rgba(27, 120, 55, 1) 50%,
     rgba(246, 219, 16, 1) 100%
   );
-}
-
-.custom-shape-divider-top-1672911895 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1672911895 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 67px;
 }

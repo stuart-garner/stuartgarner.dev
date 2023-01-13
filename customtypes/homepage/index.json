@@ -103,6 +103,15 @@
           }
         }
       },
+      "testimonial_heading": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Testimonial Heading",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
+        }
+      },
       "testimonials": {
         "type": "Group",
         "config": {
@@ -155,22 +164,6 @@
               "type": "Image",
               "config": {
                 "label": "Client Logo",
-                "constraint": {},
-                "thumbnails": []
-              }
-            }
-          }
-        }
-      },
-      "built_with_tech": {
-        "type": "Group",
-        "config": {
-          "label": "Built With Tech",
-          "fields": {
-            "next": {
-              "type": "Image",
-              "config": {
-                "label": "Tech logo",
                 "constraint": {},
                 "thumbnails": []
               }

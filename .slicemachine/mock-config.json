@@ -53,7 +53,12 @@
           "blocks": 1
         }
       },
-      "built_with_tech": {}
+      "testimonial_heading": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
     }
   },
   "slices": {
