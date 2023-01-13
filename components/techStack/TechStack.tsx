@@ -9,7 +9,7 @@ import Vercel from "../logos/Vercel";
 function TechStack() {
   return (
     <div className="container w-full pt-[50px]">
-      <div className="flex w-full flex-row justify-between gap-5 text-gray-600 md:justify-center md:gap-20 xl:gap-5">
+      <div className="flex w-full flex-row justify-between gap-5 text-gray-400 md:justify-center md:gap-20 xl:gap-5">
         <span className="flex flex-col items-center gap-5 xl:flex-row">
           <h6>Built with:</h6>
           <Next style="tech-stack-logo" />

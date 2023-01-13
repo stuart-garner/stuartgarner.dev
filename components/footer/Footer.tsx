@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
       </div>
       <TechStack />
-      <div className="container w-[90%] text-center text-gray-600">
+      <div className="container w-[90%] text-center text-gray-400">
         Copyright © Stuart Garner {new Date().getFullYear()}. All rights
         reserved.
       </div>
