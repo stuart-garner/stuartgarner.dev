@@ -9,9 +9,8 @@
   html {
     @apply scroll-smooth;
   }
-
   body {
-    @apply bg-green-500;
+    @apply bg-black;
   }
 
   body::after {
@@ -109,26 +108,6 @@ strong {
   );
 }
 
-.gradient-text {
-  background: -webkit-linear-gradient(
-    45deg,
-    rgb(49, 45, 80) 0%,
-    rgba(27, 120, 55, 1) 50%,
-    rgba(246, 219, 16, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-svg svg {
-  fill: -webkit-linear-gradient(
-    45deg,
-    rgb(49, 45, 80) 0%,
-    rgba(27, 120, 55, 1) 50%,
-    rgba(246, 219, 16, 1) 100%
-  );
-}
-
 .nav-bar {
   position: fixed;
   z-index: 100;
@@ -150,9 +129,8 @@ strong {
 }
 
 .show {
-  background: rgba(255, 255, 255, 0.6);
+  background: #fff;
   color: #151515;
-  backdrop-filter: blur(20px);
 }
 
 .menu-toggle {
