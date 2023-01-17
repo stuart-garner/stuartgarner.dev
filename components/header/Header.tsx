@@ -24,36 +24,9 @@ const Header = () => {
   };
 
   return (
-    <>
-      <header className={`nav-bar ${show && "show"}`}>
-        <h1 className="m-0 align-middle text-xl ">[SG]</h1>
-        <div id="menuToggle" className="hidden">
-          Burger Menu
-        </div>
-        <div className="menu-toggle">
-          <input
-            type="checkbox"
-            aria-labelledby="menuToggle"
-            onChange={onMenuToggle}
-          />
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </header>
-      <nav
-        className={`mobile-menu ${showMenu && "show-menu"}`}
-        role="navigation"
-      >
-        <ul id="menu">
-          <li>Home</li>
-          <li>About</li>
-          <li>Info</li>
-          <li>Contact</li>
-          <li>Show me more</li>
-        </ul>
-      </nav>
-    </>
+    <header className={`nav-bar ${show && "show"}`}>
+      <h1 className="m-0 align-middle text-xl ">[SG]</h1>
+    </header>
   );
 };
 
