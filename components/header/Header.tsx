@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [show, setShow] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -18,10 +17,6 @@ const Header = () => {
       };
     }
   }, []);
-
-  const onMenuToggle = () => {
-    setShowMenu(!showMenu);
-  };
 
   return (
     <header className={`nav-bar ${show && "show"}`}>
