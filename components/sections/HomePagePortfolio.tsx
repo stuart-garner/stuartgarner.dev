@@ -1,5 +1,5 @@
 import { PrismicRichText } from "@prismicio/react";
-
+import { v4 as uuidv4 } from "uuid";
 import { RTNode } from "@prismicio/types";
 import TopWave from "../waves/Top";
 import PortfolioProject from "./PortfolioProject";
@@ -21,7 +21,7 @@ const HomePagePortfolio = (props: PropType) => {
         <PrismicRichText field={heading} />
         <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
           {content?.map((item: any, index: number) => {
-            return <PortfolioProject key={`workItem${index}`} {...item} />;
+            return <PortfolioProject key={uuidv4()} {...item} />;
           })}
         </div>
       </div>

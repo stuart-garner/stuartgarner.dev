@@ -90,7 +90,7 @@
 }
 
 h1 strong {
-  color: black;
+  color: #151515;
 }
 
 strong {
@@ -108,7 +108,8 @@ strong {
   );
 }
 
-#about-section strong {
+#about-section strong,
+#portfolio-section strong {
   color: rgba(27, 120, 55, 1);
 }
 

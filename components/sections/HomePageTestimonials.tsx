@@ -1,6 +1,6 @@
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
-
+import { v4 as uuidv4 } from "uuid";
 import { RTNode } from "@prismicio/types";
 import BottomWave from "../waves/Bottom";
 import TopCurve from "../waves/TopCurve";
@@ -25,7 +25,7 @@ const HomePageTestimonials = (props: PropType) => {
           {content?.map((item: any, index: number) => {
             return (
               <div
-                key={`quote${index}`}
+                key={uuidv4()}
                 className="flex h-[100%] flex-col justify-between gap-10"
               >
                 <div>

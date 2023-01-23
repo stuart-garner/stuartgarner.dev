@@ -13,30 +13,31 @@ type PropsType = {
 
 const PortfolioProject = (props: PropsType) => {
   const { title, description, screenshot, githublink, live_link } = props;
+
   return (
-    <div className="flex flex-col-reverse gap-10">
-      <div className="lg:basis-1/3">
+    <div className="flex flex-col gap-10 ">
+      <PrismicNextImage
+        field={screenshot}
+        className="project-image mt-10 rounded-xl lg:mt-0 lg:mb-0 "
+      />
+      <div>
         <PrismicRichText field={title} />
         <PrismicRichText field={description} />
 
-        {(live_link || githublink) && (
+        {(live_link.url || githublink.url) && (
           <div className="flex gap-2 pt-3">
-            {live_link && (
+            {live_link.url && (
               <Link className="button py-2 px-5" href="/#about-section">
                 Live
               </Link>
             )}
-            {githublink && (
+            {githublink.url && (
               <Link className="button py-2 px-5" href="/#about-section">
                 GitHub
               </Link>
             )}
           </div>
         )}
-      </div>
-
-      <div className="project-image mt-10 rounded-xl lg:mt-0 lg:mb-0 lg:basis-2/3">
-        <PrismicNextImage field={screenshot} />
       </div>
     </div>
   );
