@@ -108,6 +108,14 @@ strong {
   );
 }
 
+#about-section strong {
+  color: rgba(27, 120, 55, 1);
+}
+
+#about-section h2 {
+  margin-bottom: 0;
+}
+
 .nav-bar {
   position: fixed;
   z-index: 100;

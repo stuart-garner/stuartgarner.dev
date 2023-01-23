@@ -21,19 +21,28 @@ const HomePageAbout = (props: PropType) => {
   const { heading, body, profilePicture } = props;
   return (
     <section id="about-section" className=" bg-white">
-      <div className="container flex flex-col-reverse items-center justify-between gap-20  text-slate-900 lg:flex-row">
-        <div className="basis-2/3">
-          <PrismicRichText field={heading} />
-          <div className="mb-10 md:text-xl xl:text-2xl">
-            <PrismicRichText field={body} />
+      <div className="container text-gray-600 ">
+        <div className="flex flex-col-reverse items-center justify-start gap-20 lg:flex-row lg:items-start">
+          <div className="lg:basis-1/2">
+            <div className="mb-10 ">
+              <PrismicRichText field={heading} />
+            </div>
+
+            <div className="mb-10  text-xl md:columns-1 md:gap-12 xl:text-2xl">
+              <PrismicRichText field={body} />
+            </div>
           </div>
-          <Link className="button" href="/#about-section">
-            My resume
-          </Link>
+
+          <div className="w-full md:max-w-[400px] lg:max-w-none lg:basis-1/2">
+            <PrismicNextImage
+              field={profilePicture}
+              className="rounded-[50%]"
+            />
+          </div>
         </div>
-        <div className="max-w-[400px] basis-1/3 lg:max-w-none">
-          <PrismicNextImage field={profilePicture} />
-        </div>
+        <Link className="button" href="/#about-section">
+          My resume
+        </Link>
       </div>
     </section>
   );
