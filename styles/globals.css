@@ -85,7 +85,7 @@
   }
 
   .social-icons {
-    @apply h-full w-auto;
+    @apply h-full h-[50px] w-auto;
   }
 }
 

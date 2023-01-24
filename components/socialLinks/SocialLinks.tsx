@@ -13,7 +13,7 @@ type PropsType = {
 function SocialLinks(props: PropsType) {
   const { colour } = props;
   return (
-    <div className="flex h-[50px] justify-start gap-10">
+    <div className="flex flex-wrap justify-start gap-10">
       <Link href="https://www.linkedin.com/in/stuartjgarner/">
         <LinkedIn style={`social-icons ${colour}`} />
       </Link>
