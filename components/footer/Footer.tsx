@@ -11,7 +11,7 @@ const Footer = () => {
             If you like what you see and what to learn more, drop me a message.
           </h4>
           <p>Or find me on...</p>
-          <SocialLinks />
+          <SocialLinks colour={"fill-gray-50"} />
         </div>
         <div className="basis-1/2">
           <ContactForm />

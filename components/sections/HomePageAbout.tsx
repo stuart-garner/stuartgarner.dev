@@ -6,6 +6,7 @@ import {
   RTNode,
 } from "@prismicio/types";
 import { PrismicNextImage } from "@prismicio/next";
+import SocialLinks from "../socialLinks";
 
 type PropType = {
   heading: [] | [RTNode, ...RTNode[]] | null | undefined;
@@ -40,9 +41,7 @@ const HomePageAbout = (props: PropType) => {
             />
           </div>
         </div>
-        <Link className="button" href="/#about-section">
-          My resume
-        </Link>
+        <SocialLinks colour={"fill-gray-600"} />
       </div>
     </section>
   );

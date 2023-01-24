@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Header = () => {
@@ -20,7 +21,9 @@ const Header = () => {
 
   return (
     <header className={`nav-bar ${show && "show"}`}>
-      <h1 className="m-0 align-middle text-xl ">[SG]</h1>
+      <Link href="/" scroll={false}>
+        <h1 className="m-0 align-middle text-xl ">[SG]</h1>
+      </Link>
     </header>
   );
 };

@@ -17,7 +17,7 @@ const HomePageIntro = (props: PropType) => {
       <div className="container flex h-full items-center justify-between">
         <div className="flex flex-col gap-10 ">
           <PrismicRichText field={heading} />
-          <Link className="button" href="/#about-section">
+          <Link className="button" href="/#about-section" scroll={false}>
             Learn more
           </Link>
         </div>

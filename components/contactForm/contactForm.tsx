@@ -1,12 +1,32 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import Image from "next/image";
 function ContactForm() {
   const [state, handleSubmit] = useForm("xeqwqlpj");
   if (state.succeeded) {
-    return <p className="text-gray-50">Thanks for joining!</p>;
+    return (
+      <div className="flex h-[430px] items-center justify-center gap-5 text-gray-50 xl:items-start xl:justify-start">
+        <div className="flex flex-col items-center gap-5 md:flex-row">
+          <Image
+            src="/footer-profile-pic.webp"
+            width={400}
+            height={400}
+            alt="Stuart Garner Footer Profile Picture"
+            className="w-[200px]"
+          />
+          <div className="text-center md:text-left">
+            <h4>Thanks for reaching out!</h4>
+            <p>I will be in touch as soon as I can.</p>
+          </div>
+        </div>
+      </div>
+    );
   }
   return (
-    <form onSubmit={handleSubmit} className="flex w-full flex-col gap-5 ">
+    <form
+      onSubmit={handleSubmit}
+      className="flex h-[430px] w-full flex-col gap-5"
+    >
       <span className="flex flex-col gap-2">
         <label htmlFor="email">Email Address:</label>
         <input
