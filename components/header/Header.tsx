@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <header className={`nav-bar ${show && "show"}`}>
       <Link href="/" scroll={false}>
-        <h1 className="m-0 align-middle text-xl ">[SG]</h1>
+        <span className="m-0 align-middle text-xl ">[SG]</span>
       </Link>
     </header>
   );

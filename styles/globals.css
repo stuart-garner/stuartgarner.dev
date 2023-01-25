@@ -129,12 +129,12 @@ strong {
   align-items: center;
   padding: 0 20px 0 20px;
 }
-.nav-bar h1 {
+.nav-bar span {
   color: #fff;
   font-family: "Orbitron", sans-serif;
   font-size: 30px;
 }
-.show h1 {
+.show span {
   color: #151515;
 }
 
