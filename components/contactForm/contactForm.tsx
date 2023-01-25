@@ -1,12 +1,19 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 function ContactForm() {
   const [state, handleSubmit] = useForm("xeqwqlpj");
   if (state.succeeded) {
     return (
       <div className="flex h-[430px] items-center justify-center gap-5 text-gray-50 xl:items-start xl:justify-start">
-        <div className="flex flex-col items-center gap-5 md:flex-row">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ repeat: 0, duration: 0.5 }}
+          className="flex flex-col items-center gap-5 md:flex-row"
+        >
           <Image
             src="/footer-profile-pic.webp"
             width={400}
@@ -18,7 +25,7 @@ function ContactForm() {
             <h4>Thanks for reaching out!</h4>
             <p>I will be in touch as soon as I can.</p>
           </div>
-        </div>
+        </motion.div>
       </div>
     );
   }

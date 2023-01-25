@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { RTNode } from "@prismicio/types";
 import BottomWave from "../waves/Bottom";
 import TopCurve from "../waves/TopCurve";
+import { motion } from "framer-motion";
 
 type PropType = {
   heading: [] | [RTNode, ...RTNode[]] | null | undefined;
@@ -12,6 +13,7 @@ type PropType = {
 
 const HomePageTestimonials = (props: PropType) => {
   const { heading, content } = props;
+  let delay: number = 0;
   return (
     <section
       id="testimonials-section"
@@ -23,15 +25,33 @@ const HomePageTestimonials = (props: PropType) => {
         <PrismicRichText field={heading} />
         <div className="grid grid-cols-1 gap-20 lg:grid-cols-3">
           {content?.map((item: any, index: number) => {
+            delay += 0.1;
             return (
               <div
                 key={uuidv4()}
                 className="flex h-[100%] flex-col justify-between gap-10"
               >
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    repeat: 0,
+                    duration: 0.5,
+                    delay: delay,
+                  }}
+                >
                   <PrismicRichText field={item.quote} />
-                </div>
-                <div className="flex flex-row justify-start gap-5 ">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    repeat: 0,
+                    duration: 0.5,
+                    delay: 0.25 + delay,
+                  }}
+                  className="flex flex-row justify-start gap-5 "
+                >
                   <div className="w-[75px]  grayscale">
                     <PrismicNextImage
                       field={item.profile_picture}
@@ -42,7 +62,7 @@ const HomePageTestimonials = (props: PropType) => {
                     <PrismicRichText field={item.name} />
                     <PrismicRichText field={item.affiliation} />
                   </div>
-                </div>
+                </motion.div>
               </div>
             );
           })}

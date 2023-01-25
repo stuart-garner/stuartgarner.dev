@@ -1,5 +1,6 @@
 import { PrismicRichText } from "@prismicio/react";
-import Link from "next/link";
+import { motion } from "framer-motion";
+
 import {
   EmptyImageFieldImage,
   FilledImageFieldImage,
@@ -7,6 +8,7 @@ import {
 } from "@prismicio/types";
 import { PrismicNextImage } from "@prismicio/next";
 import SocialLinks from "../socialLinks";
+import { once } from "events";
 
 type PropType = {
   heading: [] | [RTNode, ...RTNode[]] | null | undefined;
@@ -25,21 +27,36 @@ const HomePageAbout = (props: PropType) => {
       <div className="container text-gray-600 ">
         <div className="flex flex-col-reverse items-center justify-start gap-20 lg:flex-row lg:items-start">
           <div className="lg:basis-1/2">
-            <div className="mb-10 ">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ repeat: 0, duration: 0.5 }}
+              className="mb-10"
+            >
               <PrismicRichText field={heading} />
-            </div>
+            </motion.div>
 
-            <div className="mb-10  text-xl md:columns-1 md:gap-12 xl:text-2xl">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ repeat: 0, duration: 0.5 }}
+              className="mb-10  text-xl md:columns-1 md:gap-12 xl:text-2xl"
+            >
               <PrismicRichText field={body} />
-            </div>
+            </motion.div>
           </div>
 
-          <div className="w-full md:max-w-[400px] lg:max-w-none lg:basis-1/2">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ repeat: 0, duration: 1 }}
+            className="w-full md:max-w-[400px] lg:max-w-none lg:basis-1/2"
+          >
             <PrismicNextImage
               field={profilePicture}
               className="rounded-[50%]"
             />
-          </div>
+          </motion.div>
         </div>
         <SocialLinks colour={"fill-gray-600"} />
       </div>

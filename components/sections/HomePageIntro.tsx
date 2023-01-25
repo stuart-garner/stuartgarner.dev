@@ -2,6 +2,7 @@ import { PrismicRichText } from "@prismicio/react";
 import Link from "next/link";
 import { RTNode } from "@prismicio/types";
 import BottomWave from "../waves/Bottom";
+import { motion } from "framer-motion";
 
 type PropType = {
   heading: [] | [RTNode, ...RTNode[]] | null | undefined;
@@ -9,6 +10,7 @@ type PropType = {
 
 const HomePageIntro = (props: PropType) => {
   const { heading } = props;
+  console.log(heading);
   return (
     <section
       id="intro-section"
@@ -16,10 +18,29 @@ const HomePageIntro = (props: PropType) => {
     >
       <div className="container flex h-full items-center justify-between">
         <div className="flex flex-col gap-10 ">
-          <PrismicRichText field={heading} />
-          <Link className="button" href="/#about-section" scroll={false}>
-            Learn more
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              repeat: 0,
+              duration: 1,
+            }}
+          >
+            <PrismicRichText field={heading} />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              repeat: 0,
+              duration: 1,
+              delay: 1,
+            }}
+          >
+            <Link className="button" href="/#about-section" scroll={false}>
+              Learn more
+            </Link>
+          </motion.div>
         </div>
       </div>
       <BottomWave colour="fill-white" />
