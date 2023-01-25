@@ -10,7 +10,7 @@ type PropType = {
 
 const HomePageIntro = (props: PropType) => {
   const { heading } = props;
-  console.log(heading);
+
   return (
     <section
       id="intro-section"
