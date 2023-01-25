@@ -6,7 +6,7 @@ type Props = {
   children: ReactNode;
 };
 
-const ErrorPageLayout = (props: Props) => {
+const ErrorLayout = (props: Props) => {
   const { children } = props;
   return (
     <>
@@ -16,4 +16,4 @@ const ErrorPageLayout = (props: Props) => {
   );
 };
 
-export default ErrorPageLayout;
+export default ErrorLayout;
