@@ -38,12 +38,20 @@ const PortfolioProject = (props: PropsType) => {
         {(live_link.url || githublink.url) && (
           <div className="flex gap-2 pt-3">
             {live_link.url && (
-              <Link className="button py-2 px-5" href="/#about-section">
+              <Link
+                className="button py-2 px-5"
+                href="/#about-section"
+                aria-label="Live project"
+              >
                 Live
               </Link>
             )}
             {githublink.url && (
-              <Link className="button py-2 px-5" href="/#about-section">
+              <Link
+                className="button py-2 px-5"
+                href="/#about-section"
+                aria-label="Project repo"
+              >
                 GitHub
               </Link>
             )}

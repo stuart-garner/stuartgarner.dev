@@ -18,7 +18,12 @@ const HomePagePortfolio = (props: PropType) => {
       </h1>
       <h1 className="text-center">{message}</h1>
       <div>
-        <Link className="button" href="/" scroll={false}>
+        <Link
+          className="button"
+          href="/"
+          scroll={false}
+          aria-label="Return Home"
+        >
           Return Home
         </Link>
       </div>

@@ -37,7 +37,12 @@ const HomePageIntro = (props: PropType) => {
               delay: 1,
             }}
           >
-            <Link className="button" href="/#about-section" scroll={false}>
+            <Link
+              className="button"
+              href="/#about-section"
+              scroll={false}
+              aria-label="Learn More"
+            >
               Learn more
             </Link>
           </motion.div>

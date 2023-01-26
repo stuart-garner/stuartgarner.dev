@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header className={`nav-bar ${show && "show"}`}>
-      <Link href="/" scroll={false}>
+      <Link href="/" scroll={false} aria-label="Link to home page">
         <span className="m-0 align-middle text-xl ">[SG]</span>
       </Link>
     </header>
