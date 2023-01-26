@@ -28,8 +28,8 @@
         "config": {
           "label": "Profile Picture",
           "constraint": {
-            "width": 1515,
-            "height": 1515
+            "width": 800,
+            "height": 800
           },
           "thumbnails": []
         }
