@@ -132,7 +132,7 @@
                 "label": "Name",
                 "placeholder": "",
                 "allowTargetBlank": true,
-                "single": "heading4"
+                "single": "heading3"
               }
             },
             "affiliation": {

@@ -28,15 +28,15 @@
         }
       },
       "testimonials": {
-        "name": {
-          "config": {
-            "patternType": "HEADING",
-            "blocks": 1
-          }
-        },
         "affiliation": {
           "config": {
             "patternType": "PARAGRAPH",
+            "blocks": 1
+          }
+        },
+        "name": {
+          "config": {
+            "patternType": "HEADING",
             "blocks": 1
           }
         }
