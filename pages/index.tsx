@@ -26,8 +26,6 @@ export default function Home({ page }: Props) {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.stuartgarner.dev/" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:type" content="image/png" />
         <meta
           property="og:image"
           content={`https://www.stuartgarner.dev/logo.jpg`}
