@@ -21,12 +21,22 @@ export default function Home({ page }: Props) {
           content="I am a talented, creative and highly experienced senior front-end developer with team leader skills and over fifteen years commercial/agency experience. I can help your business reach its full web potential."
         />
         <meta
-          property="og:image"
-          content={`${process.env.WEBSITE_URL}/logo.webp`}
+          property="og:title"
+          content="[SG] - Freelance Front End Engineer"
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${process.env.WEBSITE_URL}`} />
         <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta
+          property="og:image"
+          content={`${process.env.WEBSITE_URL}/logo.jpg`}
+        />
+
+        <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1024" />
         <meta property="og:image:height" content="1024" />
+        <meta property="og:image:alt" content="Stuart's Profile Picture" />
         <link rel="canonical" href={`${process.env.WEBSITE_URL}`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
