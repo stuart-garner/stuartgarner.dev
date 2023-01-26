@@ -15,12 +15,19 @@ export default function Home({ page }: Props) {
   return (
     <>
       <Head>
-        <title>[SG] - Home - Senior Front End Engineer</title>
+        <title>[SG] - Freelance Front End Engineer</title>
         <meta
           name="description"
           content="I am a talented, creative and highly experienced senior front-end developer with team leader skills and over fifteen years commercial/agency experience. I can help your business reach its full web potential."
         />
-        <link rel="canonical" href="https://www.stuartgarner.dev/" />
+        <meta
+          property="og:image"
+          content={`${process.env.WEBSITE_URL}/logo.webp`}
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1024" />
+        <meta property="og:image:height" content="1024" />
+        <link rel="canonical" href={`${process.env.WEBSITE_URL}`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DefaultLayout>
