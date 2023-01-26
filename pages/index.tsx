@@ -25,7 +25,7 @@ export default function Home({ page }: Props) {
           content="[SG] - Freelance Front End Engineer"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.stuartgarner.dev" />
+        <meta property="og:url" content="https://www.stuartgarner.dev/" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:type" content="image/png" />
         <meta
@@ -37,7 +37,7 @@ export default function Home({ page }: Props) {
         <meta property="og:image:width" content="1024" />
         <meta property="og:image:height" content="1024" />
         <meta property="og:image:alt" content="Stuart's Profile Picture" />
-        <link rel="canonical" href="https://www.stuartgarner.dev" />
+        <link rel="canonical" href="https://www.stuartgarner.dev/" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <DefaultLayout>
