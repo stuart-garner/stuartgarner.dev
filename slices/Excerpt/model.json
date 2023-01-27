@@ -1,0 +1,28 @@
+{
+  "id": "excerpt",
+  "type": "SharedSlice",
+  "name": "Excerpt",
+  "description": "Excerpt",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Excerpt",
+      "primary": {
+        "excerpt": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Excerpt",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

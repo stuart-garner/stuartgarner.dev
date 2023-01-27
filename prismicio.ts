@@ -4,12 +4,22 @@ import sm from "./sm.json";
 
 export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
 
+const routes = [
+  {
+    type: "article",
+    path: "/blog/:uid",
+  },
+];
+
 export const createClient = ({
   previewData,
   req,
   ...config
 }: prismicNext.CreateClientConfig = {}) => {
-  const client = prismic.createClient("stuartgarnerstarter", config);
+  const client = prismic.createClient(sm.apiEndpoint, {
+    routes,
+    ...config,
+  });
 
   prismicNext.enableAutoPreviews({ client, previewData, req });
 

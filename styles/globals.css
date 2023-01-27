@@ -100,6 +100,8 @@ strong {
 #intro-section,
 #testimonials-section,
 #page-not-found,
+#blog-header,
+#post-section-header,
 .project-image {
   background: linear-gradient(
     45deg,
@@ -114,7 +116,8 @@ strong {
   color: rgba(27, 120, 55, 1);
 }
 
-#about-section h2 {
+#about-section h2,
+#article-section h2 {
   margin-bottom: 0;
 }
 

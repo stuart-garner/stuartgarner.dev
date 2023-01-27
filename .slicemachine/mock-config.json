@@ -59,7 +59,9 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "article": {},
+    "blogpage": {}
   },
   "slices": {
     "HomeIntroduction": {
@@ -79,6 +81,47 @@
         "primary": {}
       }
     },
-    "Project": {}
+    "Project": {},
+    "Image": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Text": {
+      "default": {
+        "primary": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Quote": {
+      "default": {
+        "primary": {
+          "quote": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Excerpt": {
+      "default": {
+        "primary": {
+          "excerpt": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
   }
 }

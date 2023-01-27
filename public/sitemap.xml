@@ -8,6 +8,14 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>http://localhost:3000/[uid].tsx</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>http://localhost:3000/blog.tsx</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>http://localhost:3000/index.tsx</loc>
     <changefreq>hourly</changefreq>
   </url>
