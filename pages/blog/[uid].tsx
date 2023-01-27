@@ -15,7 +15,6 @@ type Props = {
 };
 
 export default function Post({ article, latestArticles }: Props) {
-  console.log(article);
   const date: any = prismicH.asDate(
     article.data.publish_date || article.first_publication_date
   );
@@ -45,7 +44,11 @@ export default function Post({ article, latestArticles }: Props) {
               <div className="mb-10 rounded-xl bg-slate-200 py-2 px-5 text-gray-600">
                 {DateFormatter.format(date)}
               </div>
-              <div className="columns-2 gap-10">
+              <div
+                className={`${
+                  article.data.two_columns ? "columns-2" : "columns-1"
+                } gap-10`}
+              >
                 <SliceZone
                   slices={article.data.slices}
                   components={components}

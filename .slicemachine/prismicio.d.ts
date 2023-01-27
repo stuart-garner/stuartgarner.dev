@@ -9,6 +9,17 @@ type Simplify<T> = {
 /** Content for Article documents */
 interface ArticleDocumentData {
     /**
+     * Title field in *Article*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: article.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
      * Publish Date field in *Article*
      *
      * - **Field Type**: Date
@@ -42,16 +53,17 @@ interface ArticleDocumentData {
      */
     excerpt: prismicT.RichTextField;
     /**
-     * Title field in *Article*
+     * Two Columns field in *Article*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Boolean
      * - **Placeholder**: *None*
-     * - **API ID Path**: article.title
+     * - **Default Value**: false
+     * - **API ID Path**: article.two_columns
      * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
      *
      */
-    title: prismicT.KeyTextField;
+    two_columns: prismicT.BooleanField;
     /**
      * Slice Zone field in *Article*
      *

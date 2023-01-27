@@ -12,6 +12,13 @@
           "placeholder": ""
         }
       },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
       "publish_date": {
         "type": "Date",
         "config": {
@@ -36,11 +43,13 @@
           "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
-      "title": {
-        "type": "Text",
+      "two_columns": {
+        "type": "Boolean",
         "config": {
-          "label": "Title",
-          "placeholder": ""
+          "label": "Two Columns",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
         }
       },
       "slices": {
