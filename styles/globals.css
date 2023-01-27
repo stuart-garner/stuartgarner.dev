@@ -12,11 +12,11 @@
   body {
     @apply bg-black;
   }
-  /*
+
   body::after {
     @apply fixed bottom-5 left-5 z-50 rounded-xl bg-gray-900 p-[20px] text-gray-50  content-['sm'] md:content-['md'] lg:content-['lg'] xl:content-['xl'] 2xl:content-['2xl'];
   }
-*/
+
   header {
     @apply h-[50px] w-full;
   }
@@ -204,15 +204,6 @@ strong {
 }
 
 .mobile-menu {
-  position: fixed;
-  right: -300px;
-  top: 0;
-  z-index: 99;
-  height: 100%;
-  width: 300px;
-  background-color: #fff;
-  padding-top: 100px;
-  padding-left: 50px;
   transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 

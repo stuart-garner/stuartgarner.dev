@@ -33,7 +33,7 @@ const Header = () => {
         <div id="menuToggle" className="hidden">
           Burger Menu
         </div>
-        <div className="menu-toggle">
+        <div className="menu-toggle lg:hidden">
           <input
             type="checkbox"
             aria-labelledby="menuToggle"
@@ -46,15 +46,22 @@ const Header = () => {
       </header>
 
       <nav
-        className={`mobile-menu ${showMenu && "show-menu"}`}
+        className={`mobile-menu fixed right-[-300px] top-0 z-[99] h-full w-[300px] bg-white pt-[100px] pl-[30px] lg:right-10 lg:z-[102] lg:h-auto lg:bg-transparent lg:pt-0 ${
+          showMenu && "show-menu"
+        }`}
         role="navigation"
       >
-        <ul id="menu">
-          <li>Home</li>
-          <li>About</li>
-          <li>Info</li>
-          <li>Contact</li>
-          <li>Show me more</li>
+        <ul id="menu" className="lg:flex lg:justify-end lg:gap-10">
+          <li>
+            <Link href="/" aria-label="Link to home page">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog" aria-label="Link to blog">
+              Blog
+            </Link>
+          </li>
         </ul>
       </nav>
     </>
