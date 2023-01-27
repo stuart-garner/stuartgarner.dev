@@ -51,7 +51,7 @@ export default function Post({ article, latestArticles }: Props) {
               </div>
               <div
                 className={`${
-                  article.data.two_columns ? "columns-2" : "columns-1"
+                  article.data.two_columns ? "lg:columns-2" : "columns-1"
                 } gap-10`}
               >
                 <SliceZone
