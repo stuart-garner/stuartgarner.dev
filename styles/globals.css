@@ -62,7 +62,7 @@
   }
 
   li {
-    @apply py-3;
+    @apply py-1;
   }
 
   .container {
@@ -88,6 +88,25 @@
     @apply origin-top-left scale-x-100 scale-y-100;
   }
 
+  .button-secondary {
+    @apply relative z-[1] inline-block w-fit overflow-hidden rounded-xl bg-gray-100 py-2 px-10 text-gray-900 transition-all duration-300;
+    text-decoration: none;
+  }
+
+  .button-secondary:hover {
+    @apply text-gray-50;
+  }
+
+  .button-secondary::after {
+    @apply absolute left-0 top-0 z-[-1] h-full w-full origin-top-right scale-x-0 scale-y-100 rounded-xl bg-gray-600 transition-all duration-300 content-[''];
+    transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  .button-secondary:hover::after {
+    @apply origin-top-left scale-x-100 scale-y-100;
+  }
+
   .tech-stack-logo {
     @apply h-full w-28 fill-gray-600 md:w-[200px] xl:w-28;
   }
@@ -102,7 +121,7 @@ h1 strong {
 }
 
 strong {
-  color: rgba(246, 219, 16, 1);
+  color: rgba(27, 120, 55, 1);
 }
 
 #intro-section,
@@ -119,9 +138,8 @@ strong {
   );
 }
 
-#about-section strong,
-#portfolio-section strong {
-  color: rgba(27, 120, 55, 1);
+#testimonials-section strong {
+  color: rgba(246, 219, 16, 1);
 }
 
 #about-section h2,

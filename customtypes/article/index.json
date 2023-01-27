@@ -19,6 +19,13 @@
           "placeholder": ""
         }
       },
+      "sub_title": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Title",
+          "placeholder": ""
+        }
+      },
       "publish_date": {
         "type": "Date",
         "config": {

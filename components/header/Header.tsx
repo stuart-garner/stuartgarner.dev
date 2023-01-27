@@ -46,19 +46,27 @@ const Header = () => {
       </header>
 
       <nav
-        className={`mobile-menu fixed right-[-300px] top-0 z-[99] h-full w-[300px] bg-white pt-[100px] pl-[30px] lg:right-10 lg:z-[102] lg:h-auto lg:bg-transparent lg:pt-0 ${
+        className={`mobile-menu fixed right-[-300px] top-0 z-[99] h-full w-[300px] bg-white pt-[100px] pl-[30px] lg:right-2 lg:z-[102] lg:h-auto lg:bg-transparent lg:pt-0 ${
           showMenu && "show-menu"
         }`}
         role="navigation"
       >
-        <ul id="menu" className="lg:flex lg:justify-end lg:gap-10">
+        <ul id="menu" className="lg:flex lg:justify-end lg:gap-2">
           <li>
-            <Link href="/" aria-label="Link to home page">
+            <Link
+              className="button-secondary"
+              href="/"
+              aria-label="Link to home page"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/blog" aria-label="Link to blog">
+            <Link
+              className="button-secondary"
+              href="/blog"
+              aria-label="Link to blog"
+            >
               Blog
             </Link>
           </li>

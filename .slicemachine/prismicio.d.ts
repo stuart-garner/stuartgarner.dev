@@ -20,6 +20,17 @@ interface ArticleDocumentData {
      */
     title: prismicT.KeyTextField;
     /**
+     * Sub Title field in *Article*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: article.sub_title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    sub_title: prismicT.KeyTextField;
+    /**
      * Publish Date field in *Article*
      *
      * - **Field Type**: Date

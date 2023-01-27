@@ -36,10 +36,15 @@ export default function Post({ article, latestArticles }: Props) {
                 </Link>
               </div>
 
-              <div className="mb-5 flex flex-row gap-10">
-                <h1 className="text-[100px] text-gray-800">
+              <div className="mb-5">
+                <h1 className="text-5xl text-gray-800 md:text-6xl lg:text-7xl xl:text-8xl">
                   {article.data.title}
                 </h1>
+                <p>
+                  <strong className="text-1xl md:text-2xl lg:text-3xl xl:text-4xl">
+                    {article.data.sub_title}
+                  </strong>
+                </p>
               </div>
               <div className="mb-10 rounded-xl bg-slate-200 py-2 px-5 text-gray-600">
                 {DateFormatter.format(date)}

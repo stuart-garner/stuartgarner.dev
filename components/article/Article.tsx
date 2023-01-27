@@ -44,7 +44,7 @@ const Article = (props: PropTypes) => {
   console.log(article);
   return (
     <div className="relative flex flex-col rounded-2xl bg-slate-100 p-10">
-      <div className="flex flex-row gap-10 ">
+      <div className="flex flex-row gap-5 ">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -65,6 +65,9 @@ const Article = (props: PropTypes) => {
         >
           <PrismicLink document={article} aria-label={data.title}>
             <h2>{data.title}</h2>
+            <p>
+              <strong>{data.sub_title}</strong>
+            </p>
           </PrismicLink>
         </motion.div>
       </div>
