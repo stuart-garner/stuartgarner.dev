@@ -17,21 +17,13 @@ const PortfolioProject = (props: PropsType) => {
 
   return (
     <div className="flex flex-col gap-10 ">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ repeat: 0, duration: 0.5 }}
-      >
+      <div>
         <PrismicNextImage
           field={screenshot}
           className="project-image mt-10 rounded-xl lg:mt-0 lg:mb-0 "
         />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ repeat: 0, duration: 0.5 }}
-      >
+      </div>
+      <div>
         <PrismicRichText field={title} />
         <PrismicRichText field={description} />
 
@@ -57,7 +49,7 @@ const PortfolioProject = (props: PropsType) => {
             )}
           </div>
         )}
-      </motion.div>
+      </div>
     </div>
   );
 };

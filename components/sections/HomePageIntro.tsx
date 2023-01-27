@@ -18,25 +18,10 @@ const HomePageIntro = (props: PropType) => {
     >
       <div className="container flex h-full items-center justify-between">
         <div className="flex flex-col gap-10 ">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              repeat: 0,
-              duration: 1,
-            }}
-          >
+          <div>
             <PrismicRichText field={heading} />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              repeat: 0,
-              duration: 1,
-              delay: 1,
-            }}
-          >
+          </div>
+          <div>
             <Link
               className="button"
               href="/#about-section"
@@ -45,7 +30,7 @@ const HomePageIntro = (props: PropType) => {
             >
               Learn more
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
       <BottomWave colour="fill-white" />

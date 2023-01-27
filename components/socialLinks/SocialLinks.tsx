@@ -21,24 +21,11 @@ type LinkPropTypes = {
 const SocialLink = (props: LinkPropTypes) => {
   const { children, delay, href, label } = props;
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{
-        repeat: 0,
-        duration: 0.5,
-        delay,
-      }}
-      whileHover={{
-        scale: 1.2,
-        transition: { duration: 0.25 },
-      }}
-      whileTap={{ scale: 0.9 }}
-    >
+    <div>
       <Link href={href} aria-label={label}>
         {children}
       </Link>
-    </motion.div>
+    </div>
   );
 };
 
