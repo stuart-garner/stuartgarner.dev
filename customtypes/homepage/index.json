@@ -99,6 +99,141 @@
                 "constraint": {},
                 "thumbnails": []
               }
+            },
+            "next": {
+              "type": "Boolean",
+              "config": {
+                "label": "next",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "typescript": {
+              "type": "Boolean",
+              "config": {
+                "label": "typeScript",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "tailwind": {
+              "type": "Boolean",
+              "config": {
+                "label": "tailwind",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "prismic": {
+              "type": "Boolean",
+              "config": {
+                "label": "prismic",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "formspree": {
+              "type": "Boolean",
+              "config": {
+                "label": "formspree",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "vercel": {
+              "type": "Boolean",
+              "config": {
+                "label": "vercel",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "react": {
+              "type": "Boolean",
+              "config": {
+                "label": "react",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "wordpress": {
+              "type": "Boolean",
+              "config": {
+                "label": "wordpress",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "php": {
+              "type": "Boolean",
+              "config": {
+                "label": "php",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "sass": {
+              "type": "Boolean",
+              "config": {
+                "label": "sass",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "javascript": {
+              "type": "Boolean",
+              "config": {
+                "label": "javaScript",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "css": {
+              "type": "Boolean",
+              "config": {
+                "label": "css",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "flow": {
+              "type": "Boolean",
+              "config": {
+                "label": "flow",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "html": {
+              "type": "Boolean",
+              "config": {
+                "label": "html",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            },
+            "mui": {
+              "type": "Boolean",
+              "config": {
+                "label": "mui",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
             }
           }
         }
