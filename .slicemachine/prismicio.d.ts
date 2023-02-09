@@ -174,6 +174,171 @@ export interface HomepageDocumentDataPortfolioItem {
      *
      */
     screenshot: prismicT.ImageField<never>;
+    /**
+     * next field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].next
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    next: prismicT.BooleanField;
+    /**
+     * typeScript field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].typescript
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    typescript: prismicT.BooleanField;
+    /**
+     * tailwind field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].tailwind
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    tailwind: prismicT.BooleanField;
+    /**
+     * prismic field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].prismic
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    prismic: prismicT.BooleanField;
+    /**
+     * formspree field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].formspree
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    formspree: prismicT.BooleanField;
+    /**
+     * vercel field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].vercel
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    vercel: prismicT.BooleanField;
+    /**
+     * react field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].react
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    react: prismicT.BooleanField;
+    /**
+     * wordpress field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].wordpress
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    wordpress: prismicT.BooleanField;
+    /**
+     * php field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].php
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    php: prismicT.BooleanField;
+    /**
+     * sass field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].sass
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    sass: prismicT.BooleanField;
+    /**
+     * javaScript field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].javascript
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    javascript: prismicT.BooleanField;
+    /**
+     * css field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].css
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    css: prismicT.BooleanField;
+    /**
+     * flow field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].flow
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    flow: prismicT.BooleanField;
+    /**
+     * html field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].html
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    html: prismicT.BooleanField;
+    /**
+     * mui field in *homePage → Portfolio*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: homepage.portfolio[].mui
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    mui: prismicT.BooleanField;
 }
 /**
  * Item in homePage → Testimonials
