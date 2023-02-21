@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container flex flex-col justify-start gap-20 xl:flex-row">
         <div className="flex basis-1/2 flex-col gap-5">
           <h4>
-            If you like what you see and what to learn more, drop me a message.
+            If you like what you see and want to learn more, drop me a message.
           </h4>
           <p>Or find me on...</p>
           <SocialLinks colour={"fill-gray-50"} />
