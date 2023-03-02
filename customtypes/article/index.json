@@ -64,13 +64,16 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "code_block": {
+              "type": "SharedSlice"
+            },
             "image": {
               "type": "SharedSlice"
             },
-            "text": {
+            "quote": {
               "type": "SharedSlice"
             },
-            "quote": {
+            "text": {
               "type": "SharedSlice"
             }
           }

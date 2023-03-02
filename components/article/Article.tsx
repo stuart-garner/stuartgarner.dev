@@ -65,7 +65,7 @@ const Article = (props: PropTypes) => {
         >
           <PrismicLink document={article} aria-label={data.title}>
             <h2>{data.title}</h2>
-            <p>
+            <p className="mt-5">
               <strong>{data.sub_title}</strong>
             </p>
           </PrismicLink>

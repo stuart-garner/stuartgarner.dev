@@ -1,5 +1,4 @@
 import React from "react";
-import { PrismicRichText } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 /**
  * @typedef {import("@prismicio/client").Content.TextSlice} TextSlice
@@ -8,23 +7,24 @@ import * as prismicH from "@prismicio/helpers";
  */
 const Text = ({ slice }) => {
   const htmlSerializer = {
-    paragraph: ({ children, key, type, node, text }) => `<p>${text}</p>`,
-    oListItem: ({ children, key, type, node, text }) => `<li>${text}</li>`,
+    paragraph: ({ text }) => `<p class="mb-[24px]">${text}</p>`,
+    oList: ({ children }) =>
+      `<ol class="ml-[30px] list-decimal">${children}</ol>`,
+    oListItem: ({ children, text }) => `<li>${text}</li>`,
+    heading3: ({ text }) => `<h3 class="mt-[30px]">${text}</h3>`,
   };
 
   const result = prismicH.asHTML(slice.primary.text, null, htmlSerializer);
-  console.log({ result });
-  return (
-    <div>
-      {slice.primary.text ? (
-        <>
-          <span dangerouslySetInnerHTML={{ __html: result }} />
-        </>
-      ) : (
-        <p>start by editing this slice from inside Slice Machine!</p>
-      )}
-    </div>
-  );
+
+  if (slice.primary.text) {
+    return (
+      <span
+        className="blog-entry-text"
+        dangerouslySetInnerHTML={{ __html: result }}
+      />
+    );
+  }
+  return <p>start by editing this slice from inside Slice Machine!</p>;
 };
 
 export default Text;

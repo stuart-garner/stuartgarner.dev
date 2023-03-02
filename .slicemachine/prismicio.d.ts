@@ -91,7 +91,7 @@ interface ArticleDocumentData {
  * Slice for *Article → Slice Zone*
  *
  */
-type ArticleDocumentDataSlicesSlice = ImageSlice | TextSlice | QuoteSlice;
+type ArticleDocumentDataSlicesSlice = CodeBlockSlice | ImageSlice | QuoteSlice | TextSlice;
 /**
  * Article document from Prismic
  *
@@ -391,44 +391,54 @@ type HomepageDocumentDataSlicesSlice = never;
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
 export type AllDocumentTypes = ArticleDocument | BlogpageDocument | HomepageDocument;
 /**
- * Primary content in Excerpt → Primary
+ * Primary content in CodeBlock → Primary
  *
  */
-interface ExcerptSliceDefaultPrimary {
+interface CodeBlockSliceDefaultPrimary {
     /**
-     * Excerpt field in *Excerpt → Primary*
+     * Code Type field in *CodeBlock → Primary*
      *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: excerpt.primary.excerpt
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: code_block.primary.code_type
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    excerpt: prismicT.RichTextField;
+    code_type: prismicT.SelectField<"JavaScript" | "SCSS" | "CSS" | "HTML" | "TypeScript" | "JSON" | "YAML">;
+    /**
+     * Code Block field in *CodeBlock → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: code_block.primary.code_block
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    code_block: prismicT.KeyTextField;
 }
 /**
- * Default variation for Excerpt Slice
+ * Default variation for CodeBlock Slice
  *
  * - **API ID**: `default`
- * - **Description**: `Excerpt`
+ * - **Description**: `CodeBlock`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type ExcerptSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ExcerptSliceDefaultPrimary>, never>;
+export type CodeBlockSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CodeBlockSliceDefaultPrimary>, never>;
 /**
- * Slice variation for *Excerpt*
+ * Slice variation for *CodeBlock*
  *
  */
-type ExcerptSliceVariation = ExcerptSliceDefault;
+type CodeBlockSliceVariation = CodeBlockSliceDefault;
 /**
- * Excerpt Shared Slice
+ * CodeBlock Shared Slice
  *
- * - **API ID**: `excerpt`
- * - **Description**: `Excerpt`
+ * - **API ID**: `code_block`
+ * - **Description**: `CodeBlock`
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type ExcerptSlice = prismicT.SharedSlice<"excerpt", ExcerptSliceVariation>;
+export type CodeBlockSlice = prismicT.SharedSlice<"code_block", CodeBlockSliceVariation>;
 /**
  * Primary content in Image → Primary
  *
@@ -478,180 +488,6 @@ type ImageSliceVariation = ImageSliceDefault;
  *
  */
 export type ImageSlice = prismicT.SharedSlice<"image", ImageSliceVariation>;
-/**
- * Primary content in Portfolio → Primary
- *
- */
-interface HomeIntroductionSliceDefaultPrimary {
-    /**
-     * Title field in *Portfolio → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: home_introduction.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-}
-/**
- * Item in Portfolio → Items
- *
- */
-export interface HomeIntroductionSliceDefaultItem {
-    /**
-     * Project Title field in *Portfolio → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_introduction.items[].project_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    project_title: prismicT.RichTextField;
-    /**
-     * Project Description field in *Portfolio → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_introduction.items[].project_description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    project_description: prismicT.RichTextField;
-    /**
-     * Project Screenshot field in *Portfolio → Items*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_introduction.items[].project_screenshot
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    project_screenshot: prismicT.ImageField<never>;
-    /**
-     * GitHub Link field in *Portfolio → Items*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_introduction.items[].github_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    github_link: prismicT.LinkField;
-    /**
-     * Live Link field in *Portfolio → Items*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: home_introduction.items[].live_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    live_link: prismicT.LinkField;
-}
-/**
- * Default variation for Portfolio Slice
- *
- * - **API ID**: `default`
- * - **Description**: `HomeIntroduction`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type HomeIntroductionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HomeIntroductionSliceDefaultPrimary>, Simplify<HomeIntroductionSliceDefaultItem>>;
-/**
- * Slice variation for *Portfolio*
- *
- */
-type HomeIntroductionSliceVariation = HomeIntroductionSliceDefault;
-/**
- * Portfolio Shared Slice
- *
- * - **API ID**: `home_introduction`
- * - **Description**: `HomeIntroduction`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type HomeIntroductionSlice = prismicT.SharedSlice<"home_introduction", HomeIntroductionSliceVariation>;
-/**
- * Primary content in Project → Primary
- *
- */
-interface ProjectSliceDefaultPrimary {
-    /**
-     * Title field in *Project → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: project.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Description field in *Project → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: project.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
-    /**
-     * Screen Shot field in *Project → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: project.primary.screen_shot
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    screen_shot: prismicT.ImageField<never>;
-    /**
-     * Git hub Link field in *Project → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: project.primary.git_hub_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    git_hub_link: prismicT.LinkField;
-    /**
-     * Live Link field in *Project → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: project.primary.live_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    live_link: prismicT.LinkField;
-}
-/**
- * Default variation for Project Slice
- *
- * - **API ID**: `default`
- * - **Description**: `Project`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type ProjectSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ProjectSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *Project*
- *
- */
-type ProjectSliceVariation = ProjectSliceDefault;
-/**
- * Project Shared Slice
- *
- * - **API ID**: `project`
- * - **Description**: `Project`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type ProjectSlice = prismicT.SharedSlice<"project", ProjectSliceVariation>;
 /**
  * Primary content in Quote → Primary
  *
@@ -735,6 +571,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, BlogpageDocumentData, BlogpageDocumentDataArticlesItem, BlogpageDocument, HomepageDocumentData, HomepageDocumentDataPortfolioItem, HomepageDocumentDataTestimonialsItem, HomepageDocumentDataClientsItem, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, ExcerptSliceDefaultPrimary, ExcerptSliceDefault, ExcerptSliceVariation, ExcerptSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, HomeIntroductionSliceDefaultPrimary, HomeIntroductionSliceDefaultItem, HomeIntroductionSliceDefault, HomeIntroductionSliceVariation, HomeIntroductionSlice, ProjectSliceDefaultPrimary, ProjectSliceDefault, ProjectSliceVariation, ProjectSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, BlogpageDocumentData, BlogpageDocumentDataArticlesItem, BlogpageDocument, HomepageDocumentData, HomepageDocumentDataPortfolioItem, HomepageDocumentDataTestimonialsItem, HomepageDocumentDataClientsItem, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, CodeBlockSliceDefaultPrimary, CodeBlockSliceDefault, CodeBlockSliceVariation, CodeBlockSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }
