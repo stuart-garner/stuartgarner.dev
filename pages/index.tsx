@@ -29,6 +29,7 @@ export default function Home({ page }: Props) {
           <HomePageTestimonials
             heading={page.data.testimonial_heading}
             content={page.data.testimonials}
+            clients={page.data.clients}
           />
         </>
       </DefaultLayout>

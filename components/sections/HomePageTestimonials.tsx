@@ -5,14 +5,16 @@ import { RTNode } from "@prismicio/types";
 import BottomWave from "../waves/Bottom";
 import TopCurve from "../waves/TopCurve";
 import { motion } from "framer-motion";
+import ClientList from "../clientList/ClientList";
 
 type PropType = {
   heading: [] | [RTNode, ...RTNode[]] | null | undefined;
   content: [] | [RTNode, ...RTNode[]] | null | undefined;
+  clients: [] | [RTNode, ...RTNode[]] | null | undefined;
 };
 
 const HomePageTestimonials = (props: PropType) => {
-  const { heading, content } = props;
+  const { heading, content, clients } = props;
   let delay: number = 0;
   return (
     <section
@@ -52,7 +54,7 @@ const HomePageTestimonials = (props: PropType) => {
                   }}
                   className="flex flex-row justify-start gap-5 "
                 >
-                  <div className="w-[75px]  grayscale">
+                  <div className="w-[75px] grayscale">
                     <PrismicNextImage
                       field={item.profile_picture}
                       className="rounded-xl"
@@ -67,6 +69,7 @@ const HomePageTestimonials = (props: PropType) => {
             );
           })}
         </div>
+        <ClientList clients={clients} colour="fill-white" />
       </div>
       <BottomWave colour="fill-black" />
     </section>
