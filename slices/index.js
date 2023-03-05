@@ -3,12 +3,14 @@
 import CodeBlock from './CodeBlock';
 import Image from './Image';
 import Quote from './Quote';
+import SectionSeperator from './SectionSeperator';
 import Text from './Text';
 
 export {
 	CodeBlock,
 	Image,
 	Quote,
+	SectionSeperator,
 	Text,
 };
 
@@ -16,5 +18,6 @@ export const components = {
 	code_block: CodeBlock,
 	image: Image,
 	quote: Quote,
+	section_seperator: SectionSeperator,
 	text: Text,
 };

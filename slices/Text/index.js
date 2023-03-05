@@ -12,6 +12,7 @@ const Text = ({ slice }) => {
       `<ol class="ml-[30px] list-decimal">${children}</ol>`,
     oListItem: ({ children, text }) => `<li>${text}</li>`,
     heading3: ({ text }) => `<h3 class="mt-[30px]">${text}</h3>`,
+    strong: ({ text }) => `<strong>${text}</strong>`,
   };
 
   const result = prismicH.asHTML(slice.primary.text, null, htmlSerializer);

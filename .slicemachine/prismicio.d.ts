@@ -91,7 +91,7 @@ interface ArticleDocumentData {
  * Slice for *Article → Slice Zone*
  *
  */
-type ArticleDocumentDataSlicesSlice = CodeBlockSlice | ImageSlice | QuoteSlice | TextSlice;
+type ArticleDocumentDataSlicesSlice = CodeBlockSlice | ImageSlice | QuoteSlice | TextSlice | SectionSeperatorSlice;
 /**
  * Article document from Prismic
  *
@@ -569,7 +569,7 @@ interface CodeBlockSliceDefaultPrimary {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    code_type: prismicT.SelectField<"JavaScript" | "SCSS" | "CSS" | "HTML" | "TypeScript" | "JSON" | "YAML">;
+    code_type: prismicT.SelectField<"JavaScript" | "SCSS" | "CSS" | "HTML" | "TypeScript" | "JSON" | "YAML" | "JSX" | "TSX">;
     /**
      * Code Block field in *CodeBlock → Primary*
      *
@@ -693,6 +693,29 @@ type QuoteSliceVariation = QuoteSliceDefault;
  */
 export type QuoteSlice = prismicT.SharedSlice<"quote", QuoteSliceVariation>;
 /**
+ * Default variation for SectionSeperator Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `SectionSeperator`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SectionSeperatorSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, never>;
+/**
+ * Slice variation for *SectionSeperator*
+ *
+ */
+type SectionSeperatorSliceVariation = SectionSeperatorSliceDefault;
+/**
+ * SectionSeperator Shared Slice
+ *
+ * - **API ID**: `section_seperator`
+ * - **Description**: `SectionSeperator`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SectionSeperatorSlice = prismicT.SharedSlice<"section_seperator", SectionSeperatorSliceVariation>;
+/**
  * Primary content in Text → Primary
  *
  */
@@ -736,6 +759,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, BlogpageDocumentData, BlogpageDocumentDataArticlesItem, BlogpageDocument, HomepageDocumentData, HomepageDocumentDataPortfolioItem, HomepageDocumentDataTestimonialsItem, HomepageDocumentDataClientsItem, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, CodeBlockSliceDefaultPrimary, CodeBlockSliceDefault, CodeBlockSliceVariation, CodeBlockSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, BlogpageDocumentData, BlogpageDocumentDataArticlesItem, BlogpageDocument, HomepageDocumentData, HomepageDocumentDataPortfolioItem, HomepageDocumentDataTestimonialsItem, HomepageDocumentDataClientsItem, HomepageDocumentDataSlicesSlice, HomepageDocument, AllDocumentTypes, CodeBlockSliceDefaultPrimary, CodeBlockSliceDefault, CodeBlockSliceVariation, CodeBlockSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, SectionSeperatorSliceDefault, SectionSeperatorSliceVariation, SectionSeperatorSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }

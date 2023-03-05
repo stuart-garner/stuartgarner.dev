@@ -23,7 +23,9 @@
               "HTML",
               "TypeScript",
               "JSON",
-              "YAML"
+              "YAML",
+              "JSX",
+              "TSX"
             ]
           }
         },

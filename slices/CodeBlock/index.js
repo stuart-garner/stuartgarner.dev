@@ -17,12 +17,14 @@ const CodeBlock = ({ slice }) => {
   console.log(slice.primary, slice.primary.code_type.toLowerCase());
   if (slice.primary.code_block && slice.primary.code_type) {
     return (
-      <ReactSyntaxHighlighter
-        language={slice.primary.code_type.toLowerCase()}
-        style={style}
-      >
-        {slice.primary.code_block}
-      </ReactSyntaxHighlighter>
+      <div className="mb-12 mt-[-10px] rounded-xl">
+        <ReactSyntaxHighlighter
+          language={slice.primary.code_type.toLowerCase()}
+          style={style}
+        >
+          {slice.primary.code_block}
+        </ReactSyntaxHighlighter>
+      </div>
     );
   }
   return <p>start by editing this slice from inside Slice Machine!</p>;

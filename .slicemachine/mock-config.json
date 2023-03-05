@@ -127,6 +127,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "SectionSeperator": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

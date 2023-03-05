@@ -5,7 +5,7 @@
     "primary": {
       "code_type": {
         "__TYPE__": "FieldContent",
-        "value": "SCSS",
+        "value": "JSON",
         "type": "Select"
       },
       "code_block": {

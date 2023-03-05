@@ -75,6 +75,9 @@
             },
             "text": {
               "type": "SharedSlice"
+            },
+            "section_seperator": {
+              "type": "SharedSlice"
             }
           }
         }
