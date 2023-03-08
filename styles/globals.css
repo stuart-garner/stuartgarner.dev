@@ -18,7 +18,7 @@
   }
 */
   header {
-    @apply h-[50px] w-full;
+    @apply h-[55px] w-full;
   }
 
   section {
@@ -63,7 +63,7 @@
   }
 
   li {
-    @apply py-1 xl:text-xl;
+    @apply py-0 xl:text-xl;
   }
 
   pre {
@@ -94,7 +94,7 @@
   }
 
   .button-secondary {
-    @apply relative z-[1] inline-block w-fit overflow-hidden rounded-xl bg-gray-100 py-2 px-10 text-gray-900 transition-all duration-300;
+    @apply relative z-[1] inline-block w-fit overflow-hidden rounded-xl py-3 px-10 transition-all duration-300;
     text-decoration: none;
   }
 
@@ -103,9 +103,10 @@
   }
 
   .button-secondary::after {
-    @apply absolute left-0 top-0 z-[-1] h-full w-full origin-top-right scale-x-0 scale-y-100 rounded-xl bg-gray-600 transition-all duration-300 content-[''];
+    @apply absolute left-0 top-0 z-[-1] h-full w-full origin-top-right scale-x-0 scale-y-100 rounded-b-xl transition-all duration-300 content-[''];
     transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
     transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    background: rgba(27, 120, 55, 0.75);
   }
 
   .button-secondary:hover::after {
@@ -167,8 +168,10 @@ strong {
   align-items: center;
   padding: 0 20px 0 20px;
 }
-.nav-bar span {
+nav ul li a {
   color: #fff;
+}
+.nav-bar span {
   font-family: "Orbitron", sans-serif;
   font-size: 30px;
 }
@@ -176,6 +179,9 @@ strong {
   color: #151515;
 }
 
+.show ul li a {
+  color: #151515;
+}
 .show {
   background: #fff;
   color: #151515;

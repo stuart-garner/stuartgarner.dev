@@ -8,8 +8,7 @@ import { PrismicRichText } from "@prismicio/react";
  */
 const SectionSeperator = ({ slice }) => (
   <div className="flex h-20 w-full items-center justify-center gap-10 ">
-    <span className="block h-[2px] w-[15%] rounded-xl bg-gray-300"></span>
-    <span className="block h-[2px] w-[15%] rounded-xl bg-gray-300"></span>
+    <span className="block h-[2px] w-full rounded-xl bg-gray-300"></span>
   </div>
 );
 

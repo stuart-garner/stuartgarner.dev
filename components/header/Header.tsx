@@ -46,7 +46,9 @@ const Header = () => {
       </header>
 
       <nav
-        className={`mobile-menu fixed right-[-300px] top-0 z-[99] h-full w-[300px] bg-white pt-[100px] pl-[30px] lg:right-2 lg:z-[102] lg:h-auto lg:bg-transparent lg:pt-0 ${
+        className={`mobile-menu ${
+          show || (showMenu && "show")
+        } fixed right-[-300px] top-0 z-[99] h-full w-[300px] bg-white pt-[100px] pl-[30px] lg:right-2 lg:z-[102] lg:h-auto lg:bg-transparent lg:pt-0 ${
           showMenu && "show-menu"
         }`}
         role="navigation"
@@ -64,10 +66,29 @@ const Header = () => {
           <li>
             <Link
               className="button-secondary"
+              href="/project"
+              aria-label="Link to project"
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="button-secondary"
               href="/blog"
               aria-label="Link to blog"
             >
               Blog
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="button-secondary"
+              href="/#contact-form"
+              scroll={false}
+              aria-label="Link to contact form"
+            >
+              Contact
             </Link>
           </li>
         </ul>
