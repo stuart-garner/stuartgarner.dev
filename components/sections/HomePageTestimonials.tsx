@@ -71,7 +71,7 @@ const HomePageTestimonials = (props: PropType) => {
         </div>
         <ClientList clients={clients} colour="fill-white" />
       </div>
-      <BottomWave colour="fill-white" />
+      <BottomWave colour="fill-black" />
     </section>
   );
 };

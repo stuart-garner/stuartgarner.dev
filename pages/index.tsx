@@ -34,8 +34,9 @@ export default function Home({ page, articles, blog }: Props) {
             content={page.data.testimonials}
             clients={page.data.clients}
           />
-
+          {/*
           <BlogPageArticles heading={blog.data.heading} content={articles} />
+  */}
         </>
       </DefaultLayout>
     </>

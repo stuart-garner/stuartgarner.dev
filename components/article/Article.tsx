@@ -43,7 +43,6 @@ const Article = (props: PropTypes) => {
     data.publish_date || first_publication_date
   );
 
-  console.log(article);
   return (
     <div className="relative flex flex-col rounded-2xl bg-slate-100 p-10">
       <div className="flex flex-row gap-5 ">
