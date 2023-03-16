@@ -4,6 +4,8 @@ import * as prismicH from "@prismicio/helpers";
 import { motion } from "framer-motion";
 
 import DateFormatter from "../dateFormatter";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookOpenReader } from "@fortawesome/free-solid-svg-icons";
 
 type DataType = {
   featured_image?: any;
@@ -86,13 +88,14 @@ const Article = (props: PropTypes) => {
             <PrismicRichText field={data.excerpt} />
           </div>
         </div>
-        <div className="text-right">
+        <div className="flex justify-end">
           <PrismicLink
-            className="button"
+            className="button flex items-center gap-5"
             document={article}
             aria-label="Read more"
           >
-            Read More...
+            Read More
+            <FontAwesomeIcon icon={faBookOpenReader} className="h-5 w-5" />
           </PrismicLink>
         </div>
       </motion.div>

@@ -8,6 +8,8 @@ import BottomWave from "../../components/waves/Bottom";
 import { SliceZone } from "@prismicio/react";
 import Link from "next/link";
 import DateFormatter from "../../components/dateFormatter";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
   article: any;
@@ -31,11 +33,13 @@ export default function Post({ article, latestArticles }: Props) {
           <section id="post-section-body" className="bg-white">
             <div className="container pb-28">
               <div className="flex gap-5 pb-5">
-                <Link className="button" href="/">
+                <Link className="button flex items-center gap-5" href="/">
                   Home
+                  <FontAwesomeIcon icon={faHome} className="h-5 w-5" />
                 </Link>
-                <Link className="button" href="/blog">
+                <Link className="button flex items-center gap-5" href="/blog">
                   All Entries
+                  <FontAwesomeIcon icon={faNewspaper} className="h-5 w-5" />
                 </Link>
               </div>
 

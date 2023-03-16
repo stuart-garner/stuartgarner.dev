@@ -1,3 +1,5 @@
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -32,7 +34,7 @@ const Header = () => {
           showScrollTop ? "bottom-5" : "bottom-[-100px]"
         }`}
       >
-        <button>hello</button>
+        <FontAwesomeIcon icon={faArrowUp} className="h-5 w-5" />
       </div>
     </header>
   );

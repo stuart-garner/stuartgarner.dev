@@ -2,6 +2,8 @@ import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMailForward, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xeqwqlpj");
@@ -60,8 +62,13 @@ function ContactForm() {
           errors={state.errors}
         />
       </span>
-      <button type="submit" disabled={state.submitting} className="button">
+      <button
+        type="submit"
+        disabled={state.submitting}
+        className="button flex items-center gap-5"
+      >
         Submit
+        <FontAwesomeIcon icon={faPaperPlane} className="h-5 w-5" />
       </button>
     </form>
   );

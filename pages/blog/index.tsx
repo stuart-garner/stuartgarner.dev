@@ -8,6 +8,8 @@ import BlogPageArticles from "../../components/sections/BlogPageArticles";
 import BottomWave from "../../components/waves/Bottom";
 import Article from "../../components/article";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -22,8 +24,9 @@ export default function Blog({ page, articles }: Props) {
           <section id="article-section" className="bg-white pb-[200px]">
             <div className="container">
               <div className="flex gap-5 pb-5">
-                <Link className="button" href="/">
+                <Link className="button flex items-center gap-5" href="/">
                   Home
+                  <FontAwesomeIcon icon={faHome} className="h-5 w-5" />
                 </Link>
               </div>
               <h2 className="text-black">All Blog Posts</h2>
