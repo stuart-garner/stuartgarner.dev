@@ -30,9 +30,12 @@ export default function Post({ article, latestArticles }: Props) {
 
           <section id="post-section-body" className="bg-white">
             <div className="container pb-28">
-              <div className="pb-5">
+              <div className="flex gap-5 pb-5">
+                <Link className="button" href="/">
+                  Home
+                </Link>
                 <Link className="button" href="/blog">
-                  Return to entries
+                  All Entries
                 </Link>
               </div>
 

@@ -4,6 +4,7 @@ import { RTNode } from "@prismicio/types";
 import BottomWave from "../waves/Bottom";
 
 import Article from "../article";
+import Link from "next/link";
 
 type PropType = {
   heading: [] | [RTNode, ...RTNode[]] | null | undefined;
@@ -15,6 +16,7 @@ const BlogPageArticles = (props: PropType) => {
   return (
     <section id="article-section" className="bg-white pb-[200px]">
       <div className="container">
+        <h2 className="text-black">Recent Blog Posts</h2>
         <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
           {content?.map((item: any, index: number) => {
             return <Article key={uuidv4()} article={item} />;

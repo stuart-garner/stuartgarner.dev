@@ -27,7 +27,6 @@
     "react-animation-on-scroll": "^5.1.0",
     "react-dom": "18.2.0",
     "react-syntax-highlighter": "^15.5.0",
-    "sass": "^1.57.1",
     "typescript": "4.9.4"
   },
   "devDependencies": {
@@ -43,6 +42,7 @@
     "postcss-import": "^15.1.0",
     "prettier": "^2.8.2",
     "prettier-plugin-tailwindcss": "^0.2.1",
+    "sass": "^1.59.2",
     "slice-machine-ui": "^0.7.0",
     "tailwind-clip-path": "^1.0.0",
     "tailwindcss": "^3.2.4",

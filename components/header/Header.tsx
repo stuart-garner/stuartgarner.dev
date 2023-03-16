@@ -2,98 +2,39 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Header = () => {
-  const [show, setShow] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     const controlNavbar = () => {
-      if (typeof window !== "undefined") {
-        window.scrollY > 175 ? setShow(true) : setShow(false);
-      }
+      window.scrollY > 375 ? setShowScrollTop(true) : setShowScrollTop(false);
     };
 
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlNavbar);
-      return () => {
-        window.removeEventListener("scroll", controlNavbar);
-      };
-    }
+    window.addEventListener("scroll", controlNavbar);
+    return () => window.removeEventListener("scroll", controlNavbar);
   }, []);
 
-  const onMenuToggle = () => {
-    setShowMenu(!showMenu);
-  };
-
   return (
-    <>
-      <header className={`nav-bar ${show && "show"}`}>
-        <Link href="/" scroll={false} aria-label="Link to home page">
-          <span className="m-0 align-middle text-xl ">[SG]</span>
-        </Link>
-        <div id="menuToggle" className="hidden">
-          Burger Menu
+    <header className="absolute z-50 h-auto w-full">
+      <nav className="flex items-center justify-between bg-transparent px-3 py-3 ">
+        <div>
+          <Link
+            href="/"
+            scroll={false}
+            aria-label="Link to home page"
+            className="font-[Orbitron] text-4xl text-white"
+          >
+            [SG]
+          </Link>
         </div>
-        <div className="menu-toggle lg:hidden">
-          <input
-            type="checkbox"
-            aria-labelledby="menuToggle"
-            onChange={onMenuToggle}
-          />
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </header>
-
-      <nav
-        className={`mobile-menu ${
-          show || (showMenu && "show")
-        } fixed right-[-300px] top-0 z-[99] h-full w-[300px] bg-white pt-[100px] pl-[30px] lg:right-2 lg:z-[102] lg:h-auto lg:bg-transparent lg:pt-0 ${
-          showMenu && "show-menu"
-        }`}
-        role="navigation"
-      >
-        <ul id="menu" className="lg:flex lg:justify-end lg:gap-2">
-          <li>
-            <Link
-              className="button-secondary"
-              href="/"
-              aria-label="Link to home page"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="button-secondary"
-              href="/project"
-              aria-label="Link to project"
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="button-secondary"
-              href="/blog"
-              aria-label="Link to blog"
-            >
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="button-secondary"
-              href="/#contact-form"
-              scroll={false}
-              aria-label="Link to contact form"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
       </nav>
-    </>
+      <div
+        className={`fixed bottom-5 right-5 rounded-xl bg-slate-900 p-6 text-white transition-all duration-300 ${
+          showScrollTop ? "bottom-5" : "bottom-[-100px]"
+        }`}
+      >
+        <button>hello</button>
+      </div>
+    </header>
   );
 };
 

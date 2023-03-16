@@ -1,10 +1,13 @@
 import DefaultLayout from "../../templates/defaultLayout";
 import { InferGetStaticPropsType, GetStaticPropsContext } from "next";
 import { createClient } from "../../prismicio";
-
+import { v4 as uuidv4 } from "uuid";
 import Meta from "../../components/meta";
 import BlogPageHeader from "../../components/sections/BlogPageHeader";
 import BlogPageArticles from "../../components/sections/BlogPageArticles";
+import BottomWave from "../../components/waves/Bottom";
+import Article from "../../components/article";
+import Link from "next/link";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -15,7 +18,23 @@ export default function Blog({ page, articles }: Props) {
       <DefaultLayout>
         <>
           <BlogPageHeader title={page.data.title} />
-          <BlogPageArticles heading={page.data.heading} content={articles} />
+
+          <section id="article-section" className="bg-white pb-[200px]">
+            <div className="container">
+              <div className="flex gap-5 pb-5">
+                <Link className="button" href="/">
+                  Home
+                </Link>
+              </div>
+              <h2 className="text-black">All Blog Posts</h2>
+              <div className="grid grid-cols-1 gap-20 lg:grid-cols-2">
+                {articles?.map((item: any, index: number) => {
+                  return <Article key={uuidv4()} article={item} />;
+                })}
+              </div>
+            </div>
+            <BottomWave colour="fill-black" />
+          </section>
         </>
       </DefaultLayout>
     </>
