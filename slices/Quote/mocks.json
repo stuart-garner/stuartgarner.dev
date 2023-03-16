@@ -1,0 +1,25 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "quote": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Cupidatat aliqua id ipsum excepteur aliquip id esse ut amet voluptate ullamco ex anim adipisicing nostrud. Do ad velit deserunt incididunt in proident exercitation esse enim mollit commodo amet."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

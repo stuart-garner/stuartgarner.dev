@@ -1,0 +1,24 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "code_type": {
+        "__TYPE__": "FieldContent",
+        "value": "JSON",
+        "type": "Select"
+      },
+      "code_block": {
+        "__TYPE__": "FieldContent",
+        "value": "science",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

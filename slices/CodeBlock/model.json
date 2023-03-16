@@ -1,0 +1,44 @@
+{
+  "id": "code_block",
+  "type": "SharedSlice",
+  "name": "CodeBlock",
+  "description": "CodeBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "CodeBlock",
+      "primary": {
+        "code_type": {
+          "type": "Select",
+          "config": {
+            "label": "Code Type",
+            "placeholder": "",
+            "options": [
+              "JavaScript",
+              "SCSS",
+              "CSS",
+              "HTML",
+              "TypeScript",
+              "JSON",
+              "YAML",
+              "JSX",
+              "TSX"
+            ]
+          }
+        },
+        "code_block": {
+          "type": "Text",
+          "config": {
+            "label": "Code Block",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

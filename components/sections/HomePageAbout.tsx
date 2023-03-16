@@ -23,7 +23,7 @@ type PropType = {
 const HomePageAbout = (props: PropType) => {
   const { heading, body, profilePicture } = props;
   return (
-    <section id="about-section" className=" bg-white">
+    <section id="about-section" className="bg-white">
       <div className="container text-gray-600 ">
         <div className="flex flex-col-reverse items-center justify-start gap-20 lg:flex-row lg:items-start">
           <div className="lg:basis-1/2">

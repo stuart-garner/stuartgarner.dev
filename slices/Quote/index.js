@@ -2,11 +2,11 @@ import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 
 /**
- * @typedef {import("@prismicio/client").Content.HomeIntroductionSlice} HomeIntroductionSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<HomeIntroductionSlice>} HomeIntroductionProps
- * @param { HomeIntroductionProps }
+ * @typedef {import("@prismicio/client").Content.QuoteSlice} QuoteSlice
+ * @typedef {import("@prismicio/react").SliceComponentProps<QuoteSlice>} QuoteProps
+ * @param { QuoteProps }
  */
-const HomeIntroduction = ({ slice }) => (
+const Quote = ({ slice }) => (
   <section>
     <span className="title">
       {
@@ -33,4 +33,4 @@ const HomeIntroduction = ({ slice }) => (
   </section>
 )
 
-export default HomeIntroduction
+export default Quote

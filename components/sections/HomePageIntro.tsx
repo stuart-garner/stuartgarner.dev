@@ -3,6 +3,8 @@ import Link from "next/link";
 import { RTNode } from "@prismicio/types";
 import BottomWave from "../waves/Bottom";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown, faHome } from "@fortawesome/free-solid-svg-icons";
 
 type PropType = {
   heading: [] | [RTNode, ...RTNode[]] | null | undefined;
@@ -38,12 +40,13 @@ const HomePageIntro = (props: PropType) => {
             }}
           >
             <Link
-              className="button"
+              className="button flex items-center gap-5"
               href="/#about-section"
               scroll={false}
               aria-label="Learn More"
             >
               Learn more
+              <FontAwesomeIcon icon={faArrowDown} className="h-5 w-5" />
             </Link>
           </motion.div>
         </div>
