@@ -15,6 +15,11 @@ const Header = () => {
     return () => window.removeEventListener("scroll", controlNavbar);
   }, []);
 
+  const topFunction = () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  };
+
   return (
     <header className="absolute z-50 h-auto w-full">
       <nav className="flex items-center justify-between bg-transparent px-3 py-3 ">
@@ -30,7 +35,8 @@ const Header = () => {
         </div>
       </nav>
       <div
-        className={`fixed bottom-5 right-5 rounded-xl bg-slate-900 p-6 text-white transition-all duration-300 ${
+        onClick={() => topFunction()}
+        className={`fixed bottom-5 right-5 cursor-pointer rounded-xl bg-slate-900 p-6 text-white transition-all duration-300 ${
           showScrollTop ? "bottom-5" : "bottom-[-100px]"
         }`}
       >
