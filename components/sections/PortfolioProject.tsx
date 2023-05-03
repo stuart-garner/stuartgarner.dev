@@ -67,31 +67,33 @@ const PortfolioProject = (props: PropsType) => {
         whileInView={{ opacity: 1 }}
         transition={{ repeat: 0, duration: 0.5 }}
       >
-        <PrismicRichText field={title} />
+        <div className="mb-5 flex items-center gap-5">
+          <PrismicRichText field={title} />
+          {(live_link.url || githublink.url) && (
+            <div className="flex gap-2 pt-3">
+              {live_link.url && (
+                <Link
+                  className="button py-2 px-5"
+                  href={live_link.url}
+                  aria-label="Live project"
+                >
+                  Visit
+                </Link>
+              )}
+              {githublink.url && (
+                <Link
+                  className="button py-2 px-5"
+                  href={githublink.url}
+                  aria-label="Project repo"
+                >
+                  GitHub
+                </Link>
+              )}
+            </div>
+          )}
+        </div>
         <PrismicRichText field={description} />
 
-        {(live_link.url || githublink.url) && (
-          <div className="flex gap-2 pt-3">
-            {live_link.url && (
-              <Link
-                className="button py-2 px-5"
-                href="/#about-section"
-                aria-label="Live project"
-              >
-                Live
-              </Link>
-            )}
-            {githublink.url && (
-              <Link
-                className="button py-2 px-5"
-                href="/#about-section"
-                aria-label="Project repo"
-              >
-                GitHub
-              </Link>
-            )}
-          </div>
-        )}
         <PortfolioTechStack
           react={react}
           typescript={typescript}

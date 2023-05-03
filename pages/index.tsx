@@ -7,7 +7,7 @@ import HomePageAbout from "../components/sections/HomePageAbout";
 import HomePagePortfolio from "../components/sections/HomePagePortfolio";
 import HomePageTestimonials from "../components/sections/HomePageTestimonials";
 import Meta from "../components/meta";
-import BlogPageArticles from "../components/sections/BlogPageArticles";
+//import BlogPageArticles from "../components/sections/BlogPageArticles";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 

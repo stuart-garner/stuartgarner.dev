@@ -34,7 +34,7 @@
   }
 
   h3 {
-    @apply mb-5 text-4xl;
+    @apply text-4xl;
   }
 
   h4 {
