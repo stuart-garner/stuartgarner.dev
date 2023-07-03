@@ -23,7 +23,7 @@ export default function Home({ page, articles, blog }: Props) {
             profilePicture={page.data.profile_picture}
             body={page.data.about_me_body}
           />
-
+          <BlogPageArticles heading={blog.data.heading} content={articles} />
           <HomePagePortfolio
             heading={page.data.portfolio_heading}
             content={page.data.portfolio}
@@ -34,8 +34,6 @@ export default function Home({ page, articles, blog }: Props) {
             content={page.data.testimonials}
             clients={page.data.clients}
           />
-
-          <BlogPageArticles heading={blog.data.heading} content={articles} />
         </>
       </DefaultLayout>
     </>

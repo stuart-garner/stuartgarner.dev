@@ -31,7 +31,6 @@ const BlogPageArticles = (props: PropType) => {
           })}
         </div>
       </div>
-      <BottomWave colour="fill-black" />
     </section>
   );
 };

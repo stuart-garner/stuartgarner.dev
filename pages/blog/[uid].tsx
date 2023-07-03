@@ -30,8 +30,8 @@ export default function Post({ article, latestArticles }: Props) {
             <BottomWave colour="fill-white" />
           </section>
 
-          <section id="post-section-body" className="bg-white">
-            <div className="container pb-28">
+          <section id="post-section-body" className=" bg-white">
+            <div className="container pb-32 xl:px-48">
               <div className="flex gap-5 pb-5">
                 <Link className="button flex items-center gap-5" href="/">
                   Home

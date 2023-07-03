@@ -14,7 +14,6 @@ const CodeBlock = ({ slice }) => {
     );
   });
 
-  console.log(slice.primary, slice.primary.code_type.toLowerCase());
   if (slice.primary.code_block && slice.primary.code_type) {
     return (
       <div className="mb-12 mt-[-10px] rounded-xl">

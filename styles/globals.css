@@ -12,11 +12,11 @@
   body {
     @apply bg-black;
   }
-  /*
+
   body::after {
     @apply fixed bottom-5 left-5 z-50 rounded-xl bg-gray-900 p-[20px] text-gray-50  content-['sm'] md:content-['md'] lg:content-['lg'] xl:content-['xl'] 2xl:content-['2xl'];
   }
-*/
+
   section {
     @apply relative pt-20 pb-20;
   }
