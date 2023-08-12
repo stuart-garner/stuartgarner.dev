@@ -70,7 +70,7 @@ function SocialLinks(props: PropsType) {
         <Instagram style={`social-icons ${colour}`} />
       </SocialLink>
 
-      <SocialLink
+     {/* <SocialLink
         delay={0.75}
         href="https://www.facebook.com/stuartjgarner"
         label="Facebook"
@@ -84,7 +84,7 @@ function SocialLinks(props: PropsType) {
         label="Twitter"
       >
         <Twitter style={`social-icons ${colour}`} />
-      </SocialLink>
+  </SocialLink>*/}
     </div>
   );
 }
