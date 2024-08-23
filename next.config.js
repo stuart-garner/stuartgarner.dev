@@ -6,12 +6,12 @@ const nextConfig = {
     locales: ["en"],
     defaultLocale: "en",
   },
-  webpack: (config, { isServer }) => {
+  /*webpack: (config, { isServer }) => {
     if (isServer) {
       require("./scripts/generate-sitemap");
     }
     return config;
-  },
+  },*/
 };
 
 module.exports = nextConfig;
